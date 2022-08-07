@@ -6,6 +6,7 @@
   </head>
   <body class="page__body">
     <header class="main-header">
+      <div class="main-header__wrapper wrapper">
       <a class="main-header__logo logo" href="#">
         <img class="logo__mobile" src="#" width="33" height="38" alt="Cat energy">
       </a>
@@ -14,14 +15,13 @@
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__list-item main-nav__list-item--active">
+            <li class="main-nav__list-item">
               <a href="#">
                 Главная
               </a>
             </li>
-            <li class="main-nav__list-item">
+            <li class="main-nav__list-item main-nav__list-item--active">
               <a href="catalog.html">
                 Каталог продукции
               </a>
@@ -32,8 +32,8 @@
               </a>
             </li>
           </ul>
-        </div>
       </nav>
+      </div>
     </header>
     <main class="catalog-container">
         <section class="basic-catalog">
@@ -316,13 +316,13 @@
                 </li>
                 <li class="additionally__item additional-product">
                     <h3 class="additional-product__title">Питьевая вода</h3>
-                    <pspan class="additional-product__size">5 литров</span>
+                    <span class="additional-product__size">5 литров</span>
                     <span>50 Р</span>
                     <button class="additional-product__button button" type="button">Заказать</button>
                 </li>
                 <li class="additionally__item additional-product">
                     <h3 class="additional-product__title">Молоко</h3>
-                    <spanclass="additional-product__size">1 литр</span>
+                    <span class="additional-product__size">1 литр</span>
                     <span>100 Р.</span>
                     <button class="additional-product__button button" type="button">Заказать</button>
                 </li>
