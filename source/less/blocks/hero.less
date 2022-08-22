@@ -7,7 +7,7 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
-  color: #FFFFFF;
+  color: @promo-color;
 }
 
 .hero__slogan {
@@ -15,19 +15,29 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: @promo-color;
 }
 
 .hero__wrapper {
   position: relative;
 }
-.hero__background{
+.hero__background {
   display: block;
   position: relative;
   background: url(../../img/hero-images/hero-background.jpg) 0 50% no-repeat;
   background-color: rgba(104, 183, 56, 0.85);
   width: 320px;
   height: 302px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(104, 183, 56, 0.85);
+    content: '';
+  }
 }
 
 .hero__link {
