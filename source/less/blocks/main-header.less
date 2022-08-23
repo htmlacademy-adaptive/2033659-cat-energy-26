@@ -2,3 +2,22 @@
   padding: 10px 20px 17px;
   border: 2px solid red;
 }
+
+.main-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.main-header__logo-wrapper {
+  display: flex;
+}

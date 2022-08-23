@@ -2,20 +2,23 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper wrapper">
-      <a class="main-header__logo logo" href="index.html">
-        <img class="logo__mobile" src="/img/logos/logo-mobile.png" width="33" height="38" alt="Cat energy">
-      </a>
-      <a class="main-header__text-logo text-logo" href="index.html">
-        <img src="/img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
-      </a>
-      <nav class="main-header__navigation main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-header__logo-wrapper">
+          <a class="main-header__logo logo" href="index.html">
+            <img class="logo__mobile" src="/img/logos/logo-mobile.svg" width="33" height="38" alt="Cat energy">
+          </a>
+          <a class="main-header__text-logo text-logo" href="index.html">
+            <img src="/img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
+          </a>
+          <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+        <nav class="main-header__navigation main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
               <a class="main-nav__list-link" href="#">
@@ -33,7 +36,7 @@
               </a>
             </li>
           </ul>
-      </nav>
+        </nav>
       </div>
     </header>
     <main class="main-container">
