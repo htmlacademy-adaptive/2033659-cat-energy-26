@@ -6,18 +6,41 @@
 .main-header__wrapper {
   display: flex;
   flex-direction: column;
+  min-height: 65px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    min-height: 78px;
   }
+
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    min-height: 112px;
   }
 }
 
 .main-header__logo-wrapper {
   display: flex;
+  height: 38px;
+}
+
+.main-header__logo {
+  margin-right: 57px;
+}
+
+.main-header__text-logo {
+  margin-right: 65px;
+}
+
+.main-header__toggle {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

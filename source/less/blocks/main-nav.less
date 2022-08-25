@@ -3,15 +3,17 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-      display: flex;
+      min-width: 440px;
       flex-direction: row;
+      justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    min-width: 478px;
     flex-direction: row;
+    justify-content: space-between;
   }
-  
+
 }
 
 .main-nav__list-link {
