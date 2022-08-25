@@ -1,0 +1,30 @@
+.promo {
+  position: relative;
+  width: 280px;
+  height: 290px;
+  padding: 35px 0;
+  border: 2px solid red;
+  background-image: url(../../img/catalog-images/image-gift.jpg);
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(104, 183, 56, 0.85);
+    content: '';
+  }
+}
+
+.promo__text {
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: @promo-color;
+  z-index: 1;
+}
