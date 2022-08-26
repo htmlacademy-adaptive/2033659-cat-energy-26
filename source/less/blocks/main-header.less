@@ -1,0 +1,55 @@
+.main-header {
+  padding: 10px 20px 17px;
+  border: 2px solid red;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 30px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 110px 0;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+.main-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 65px;
+
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 52px;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    min-height: 59px;
+
+  }
+}
+
+.main-header__logo-wrapper {
+  display: flex;
+  min-height: 38px;
+}
+
+.main-header__logo {
+  margin-right: 57px;
+}
+
+.main-header__text-logo {
+  margin-right: 65px;
+}
+
+.main-header__toggle {
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

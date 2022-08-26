@@ -1,0 +1,146 @@
+.hero {
+  padding: 0;
+  border: 2px solid red;
+}
+.hero__wrapper {
+  min-height: 480px;
+  position: relative;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    min-height: 874px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 694px;
+    margin-top: -112px;
+  }
+}
+
+.hero__background {
+  display: block;
+  position: relative;
+  background: url(../../img/hero-images/hero-background.jpg) 0 50% no-repeat;
+  background-color: rgba(104, 183, 56, 0.85);
+  width: 320px;
+  height: 302px;
+  left: -20px;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(104, 183, 56, 0.85);
+    content: '';
+  }
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    display: none;
+  }
+
+    @media (min-width: @desktop-width) {
+    display: block;
+    background: url(../../img/hero-images/hero-background-desktop.jpg) 0 50% no-repeat;
+    width: 720px;
+    height: 694px;
+    left: 720px;
+  }
+
+}
+
+.hero__text-wrapper {
+  position: absolute;
+  top: 27px;
+  left: 36px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    top: 64px;
+    left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 223px;
+    left: 190px;
+  }
+}
+
+
+.hero__title {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: @promo-color;
+  margin: 0 0 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @title-color;
+    text-align: start;
+    margin: 0 0 41px;
+  }
+}
+
+.hero__slogan {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @promo-color;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @title-color;
+    text-align: start;
+  }
+}
+
+.hero__image {
+  position: absolute;
+  top: 167px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: 709px;
+    height: 609px;
+    top: 265px;
+    left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    top: 141px;
+    left: 558px;
+  }
+}
+
+.hero__link {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  position: absolute;
+  top: 440px;
+  min-width: 280px;
+  min-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 244px;
+    min-height: 54px;
+    top: 294px;
+    left: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 244px;
+    min-height: 54px;
+    top: 455px;
+    left: 190px;
+  }
+}

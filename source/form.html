@@ -3,160 +3,152 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper wrapper">
-      <a class="main-header__logo logo" href="#">
-        <img class="logo__mobile" src="#" width="33" height="38" alt="Cat energy">
-      </a>
-      <a class="main-header__text-logo text-logo" href="#">
-        <img src="#" width="101" height="18" alt="Cat energy">
-      </a>
-      <nav class="main-header__navigation main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <a class="main-header__logo logo" href="index.html">
+          <img class="logo__mobile" src="/img/logos/logo-mobile.png" width="33" height="38" alt="Cat energy">
+        </a>
+        <a class="main-header__text-logo text-logo" href="index.html">
+          <img src="/img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
+        </a>
+        <nav class="main-header__navigation main-nav">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
-              <a href="#">
+              <a class="main-nav__list-link" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="main-nav__list-item">
-              <a href="catalog.html">
+            <li class="main-nav__list-item main-nav__list-item--active">
+              <a class="main-nav__list-link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="main-nav__list-item main-nav__list-item--active">
-              <a href="form.html">
+            <li class="main-nav__list-item">
+              <a class="main-nav__list-link" href="#">
                 Подбор программы
               </a>
             </li>
           </ul>
-      </nav>
+        </nav>
       </div>
     </header>
-    <main class="form-container">
+    <main class="form-container wrapper">
       <form class="form" action="#" method="get">
         <h1 class="form__title">Подбор программы</h1>
         <p class="form__text">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
         <fieldset class="form__fieldset cat-questionnaire">
-          <div class="cat-questionnaire__wrapper">
-            <p class="cat-questionnaire__name">
-              <label for="name">Имя:*</label>
-              <input type="text" id="name" value="Барсик" required>
-            </p>
-            <p class="cat-questionnaire__weight">
-              <label for="name">Вес (кг):*</label>
-              <input type="text" id="name" value="7" required>
-            </p>
-            <p class="cat-questionnaire__age">
-              <label for="name">Возраст (лет):</label>
-              <input type="text" id="name" value="7">
-            </p>
-          </div>
+          <p class="cat-questionnaire__name">
+            <label class="label" for="name">Имя:*</label>
+            <input class="input" type="text" id="name" value="Барсик" required>
+          </p>
+          <p class="cat-questionnaire__weight">
+            <label class="label" for="name">Вес (кг):*</label>
+            <input class="input" type="text" id="name" value="7" required>
+          </p>
+          <p class="cat-questionnaire__age">
+            <label class="label" for="name">Возраст (лет):</label>
+            <input class="input" type="text" id="name" value="7">
+          </p>
         </fieldset>
         <fieldset class="form__fieldset objective">
-          <div class="objective__wrapper">
-            <ul class="objective__list">
-              <li class="ojective__item">
-                <label>
-                  <input type="radio" name="objective" value="diet" checked>Похудение
-                </label>
-              </li>
-              <li class="ojective__item">
-                <label>
-                  <input type="radio" name="objective" value="fat">Набор массы
-                </label>
-              </li>
-              <li class="ojective__item">
-                <label>
-                  <input type="radio" name="objective" value="unknown">Не знаю (Нужен ваш совет)
-                </label>
-              </li>
-            </ul>
-          </div>
+          <ul class="objective__list">
+            <li class="ojective__item">
+              <label class="label">
+                <input type="radio" name="objective" value="diet" checked>Похудение
+              </label>
+            </li>
+            <li class="ojective__item">
+              <label class="label">
+                <input type="radio" name="objective" value="fat">Набор массы
+              </label>
+            </li>
+            <li class="ojective__item">
+              <label class="label">
+                <input type="radio" name="objective" value="unknown">Не знаю (Нужен ваш совет)
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__fieldset client-contacts">
-          <div class="client-contacts__wrapper">
-            <legend class="client-contacts__legend">Контактные данные
-            (владельца кота)</legend>
-            <p class="client-contacts____email">
-              <label for="email">E-mail:*</label>
-              <input type="email" id="email" value="kuklachev@gmail.com" required>
-            </p>
-            <p class="client-contacts____phone">
-              <label for="phone">Телефон:*</label>
-              <input type="tel" id="phone" value="8 (960) 900-60-90" required>
-            </p>
-          </div>
+          <legend class="client-contacts__legend legend">Контактные данные
+          (владельца кота)</legend>
+          <p class="client-contacts____email">
+            <label class="label" for="email">E-mail:*</label>
+            <input class="input" type="email" id="email" value="kuklachev@gmail.com" required>
+          </p>
+          <p class="client-contacts____phone">
+            <label class="label" for="phone">Телефон:*</label>
+            <input class="input"  type="tel" id="phone" value="8 (960) 900-60-90" required>
+          </p>
         </fieldset>
         <fieldset class="form__fieldset comment">
-          <div class="comment__wrapper"></div>
-            <legend class="comment__legend">Комментарий</legend>
-            <textarea class="comment__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </div>
+          <legend class="comment__legend legend">Комментарий</legend>
+          <textarea class="comment__textarea input" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__fieldset extra">
-          <div class="extra__wrapper">
-            <legend class="extra__legend">Дополнительно</legend>
-            <ul class="extra__list">
-              <li class="extra__item">
-                <label><input type="checkbox" name="sweetener" value="sweetener" checked>сахарозаменитель</label>
-              </li>
-              <li class="extra__item">
-                <label><input type="checkbox" name="woter" value="woter">питьевая вода</label>
-              </li>
-              <li class="extra__item">
-                <label><input type="checkbox" name="milk" value="milk">молоко</label>
-              </li>
-              <li class="extra__item">
-                <label><input type="checkbox" name="vitamins" value="vitamins">витамины</label>
-              </li>
-            </ul>
-            <span class="extra__text">* — Обязательные поля</span>
-            <button class="form__button button" type="submit">Отправить заявку</button>
-          </div>
+          <legend class="extra__legend legend">Дополнительно</legend>
+          <ul class="extra__list">
+            <li class="extra__item">
+              <label class="label"><input type="checkbox" name="sweetener" value="sweetener" checked>сахарозаменитель</label>
+            </li>
+            <li class="extra__item">
+              <label class="label"><input type="checkbox" name="woter" value="woter">питьевая вода</label>
+            </li>
+            <li class="extra__item">
+              <label class="label"><input type="checkbox" name="milk" value="milk">молоко</label>
+            </li>
+            <li class="extra__item">
+              <label class="label"><input type="checkbox" name="vitamins" value="vitamins">витамины</label>
+            </li>
+          </ul>
+          <span class="extra__text">* — Обязательные поля</span>
+          <button class="form__button button" type="submit">Отправить заявку</button>
         </fieldset>
-       </form>
-      </main>
-      <footer class="main-footer">
-        <div class="main-footer__contacts contacts">
-          <div class="contacts__wrapper">
+      </form>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__contacts contacts">
+        <div class="contacts__wrapper wrapper">
           <h2 class="visually-hidden">Контакты</h2>
           <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
           <address class="contacts__text">ул. Большая
             Конюшенная, д. 19/8
             Санкт-Петербург</address>
-          <img class="contacts__map" src="#" width="320" height="362" alt="Карта с указанием адреса магазина">
-          </div>
+          <img class="contacts__map" src="/img/contacts-images/map-image.png" width="320" height="362"
+            alt="Карта с указанием адреса магазина">
         </div>
-        <div class="main-footer__bottom bottom">
-          <div class="bottom__wrapper">
-            <a class="bottom__text-logo text-logo" href="#">
-              <img src="#" width="128" height="24" alt="Cat energy">
+      </div>
+      <div class="main-footer__bottom bottom">
+        <div class="bottom__wrapper wrapper">
+          <a class="bottom__text-logo text-logo" href="index.html">
+            <img src="/img/logos/text-logo.svg" width="128" height="24" alt="Cat energy">
+          </a>
+          <div class="bottom-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--telegram" href="#">Мы в Телеграме</a>
+              </li>
+            </ul>
+          </div>
+          <div class="bottom-footer__copyright copyright">
+            <b class="copyright__text">HTML Academy</b>
+            <a class="copyright__link" href="#">
+              <img src="#" class="copyright__image" width="27" height="34" alt="Логотип разработчика">
             </a>
-            <div class="bottom-footer__social social">
-              <ul class="social__list">
-                <li class="social__item">
-                  <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link social__link--telegram" href="#">Мы в Телеграме</a>
-                </li>
-              </ul>
-            </div>
-            <div class="bottom-footer__copyright copyright">
-              <b class="copyright__text">HTML Academy</b>
-              <a class="copyright__link" href="">
-                <img src="#" class="copyright__image" width="27" height="34" alt="Логотип разработчика">
-              </a>
-            </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   </body>
 </html>
