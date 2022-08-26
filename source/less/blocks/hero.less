@@ -5,6 +5,15 @@
 .hero__wrapper {
   min-height: 480px;
   position: relative;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    min-height: 874px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 694px;
+    margin-top: -112px;
+  }
 }
 
 .hero__background {
@@ -14,6 +23,7 @@
   background-color: rgba(104, 183, 56, 0.85);
   width: 320px;
   height: 302px;
+  left: -20px;
 
   &::after {
     position: absolute;
@@ -31,9 +41,30 @@
 
     @media (min-width: @desktop-width) {
     display: block;
+    background: url(../../img/hero-images/hero-background-desktop.jpg) 0 50% no-repeat;
+    width: 720px;
+    height: 694px;
+    left: 720px;
   }
 
 }
+
+.hero__text-wrapper {
+  position: absolute;
+  top: 27px;
+  left: 36px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    top: 64px;
+    left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 223px;
+    left: 190px;
+  }
+}
+
 
 .hero__title {
   display: inline-block;
@@ -42,9 +73,15 @@
   line-height: 36px;
   text-align: center;
   color: @promo-color;
-  position: absolute;
-  top: 27px;
-  margin: 0;
+  margin: 0 0 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @title-color;
+    text-align: start;
+    margin: 0 0 41px;
+  }
 }
 
 .hero__slogan {
@@ -54,15 +91,34 @@
   text-transform: uppercase;
   text-align: center;
   color: @promo-color;
-  position: absolute;
-  top: 124px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @title-color;
+    text-align: start;
+  }
 }
 
 .hero__image {
   position: absolute;
   top: 167px;
   margin: 0;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: 709px;
+    height: 609px;
+    top: 265px;
+    left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    top: 141px;
+    left: 558px;
+  }
 }
 
 .hero__link {
@@ -73,4 +129,18 @@
   top: 440px;
   min-width: 280px;
   min-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 244px;
+    min-height: 54px;
+    top: 294px;
+    left: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 244px;
+    min-height: 54px;
+    top: 455px;
+    left: 190px;
+  }
 }
