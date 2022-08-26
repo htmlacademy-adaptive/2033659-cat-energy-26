@@ -1,6 +1,21 @@
 .programs {
   border: 2px solid red;
 }
+
+.programs__wrapper {
+  display:flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 592px;
+}
+
+.programs__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .programs__item {
   background: @background-additional;
 }
@@ -11,6 +26,7 @@
   line-height: 37px;
   text-transform: uppercase;
   color: @title-color;
+  margin: 0;
 }
 
 .programs__description {
@@ -18,6 +34,7 @@
   font-size: 14px;
   line-height: 18px;
   color: @text-color;
+  margin: 0;
 }
 
 .programs__link {
