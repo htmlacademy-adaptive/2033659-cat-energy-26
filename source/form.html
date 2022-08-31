@@ -8,14 +8,16 @@
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper wrapper">
-        <a class="main-header__logo logo" href="index.html">
-          <img class="logo__mobile" src="/img/logos/logo-mobile.png" width="33" height="38" alt="Cat energy">
-        </a>
-        <a class="main-header__text-logo text-logo" href="index.html">
-          <img src="/img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
-        </a>
+        <div class="main-header__logo-wrapper">
+          <a class="main-header__logo logo" href="index.html">
+            <img class="logo__mobile" src="/img/logos/logo-mobile.svg" width="33" height="38" alt="Cat energy">
+          </a>
+          <a class="main-header__text-logo text-logo" href="index.html">
+            <img src="/img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
+          </a>
+          <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
         <nav class="main-header__navigation main-nav">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
               <a class="main-nav__list-link" href="index.html">
@@ -38,53 +40,59 @@
     </header>
     <main class="form-container wrapper">
       <form class="form" action="#" method="get">
-        <h1 class="form__title">Подбор программы</h1>
-        <p class="form__text">Заполните анкету, и мы подберем
-          программу питания для вашего кота</p>
-        <fieldset class="form__fieldset cat-questionnaire">
-          <p class="cat-questionnaire__name">
-            <label class="label" for="name">Имя:*</label>
-            <input class="input" type="text" id="name" value="Барсик" required>
-          </p>
-          <p class="cat-questionnaire__weight">
-            <label class="label" for="name">Вес (кг):*</label>
-            <input class="input" type="text" id="name" value="7" required>
-          </p>
-          <p class="cat-questionnaire__age">
-            <label class="label" for="name">Возраст (лет):</label>
-            <input class="input" type="text" id="name" value="7">
-          </p>
-        </fieldset>
-        <fieldset class="form__fieldset objective">
-          <ul class="objective__list">
-            <li class="ojective__item">
-              <label class="label">
-                <input type="radio" name="objective" value="diet" checked>Похудение
-              </label>
-            </li>
-            <li class="ojective__item">
-              <label class="label">
-                <input type="radio" name="objective" value="fat">Набор массы
-              </label>
-            </li>
-            <li class="ojective__item">
-              <label class="label">
-                <input type="radio" name="objective" value="unknown">Не знаю (Нужен ваш совет)
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="form__header">
+          <h1 class="form__title">Подбор программы</h1>
+          <p class="form__text">Заполните анкету, и мы подберем<br>
+            программу питания для вашего кота</p>
+        </div>
+        <div class="form__cat-questionnaire-wrapper">
+          <fieldset class="form__fieldset cat-questionnaire">
+            <p class="cat-questionnaire__name">
+              <label class="label" for="name">Имя:*</label>
+              <input class="input" type="text" id="name" value="Барсик" required>
+            </p>
+            <p class="cat-questionnaire__weight">
+              <label class="label" for="name">Вес (кг):*</label>
+              <input class="input" type="text" id="name" value="7" required>
+            </p>
+            <p class="cat-questionnaire__age">
+              <label class="label" for="name">Возраст (лет):</label>
+              <input class="input" type="text" id="name" value="7">
+            </p>
+          </fieldset>
+          <fieldset class="form__fieldset objective">
+            <ul class="objective__list">
+              <li class="ojective__item">
+                <label class="label">
+                  <input type="radio" name="objective" value="diet" checked>Похудение
+                </label>
+              </li>
+              <li class="ojective__item">
+                <label class="label">
+                  <input type="radio" name="objective" value="fat">Набор массы
+                </label>
+              </li>
+              <li class="ojective__item">
+                <label class="label">
+                  <input type="radio" name="objective" value="unknown">Не знаю (Нужен ваш совет)
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="form__fieldset client-contacts">
           <legend class="client-contacts__legend legend">Контактные данные
           (владельца кота)</legend>
-          <p class="client-contacts____email">
-            <label class="label" for="email">E-mail:*</label>
-            <input class="input" type="email" id="email" value="kuklachev@gmail.com" required>
-          </p>
-          <p class="client-contacts____phone">
-            <label class="label" for="phone">Телефон:*</label>
-            <input class="input"  type="tel" id="phone" value="8 (960) 900-60-90" required>
-          </p>
+          <div class="client-contacts__wrapper">
+            <p class="client-contacts__email">
+              <label class="label" for="email">E-mail:*</label>
+              <input class="input" type="email" id="email" value="kuklachev@gmail.com" required>
+            </p>
+            <p class="client-contacts__phone">
+              <label class="label" for="phone">Телефон:*</label>
+              <input class="input"  type="tel" id="phone" value="8 (960) 900-60-90" required>
+            </p>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset comment">
           <legend class="comment__legend legend">Комментарий</legend>
@@ -106,19 +114,23 @@
               <label class="label"><input type="checkbox" name="vitamins" value="vitamins">витамины</label>
             </li>
           </ul>
-          <span class="extra__text">* — Обязательные поля</span>
-          <button class="form__button button" type="submit">Отправить заявку</button>
+          <div class="extra__button-wrapper">
+            <button class="form__button button" type="submit">Отправить заявку</button>
+            <span class="extra__text">* — Обязательные поля</span>
+          </div>
         </fieldset>
       </form>
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
         <div class="contacts__wrapper wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__text">ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург</address>
+          <div class="contacts__invitation-wrapper contacts__invitation-wrapper-form">
+            <h2 class="visually-hidden">Контакты</h2>
+            <p class="contacts__invitation">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+            <address class="contacts__text">ул. Большая<br>
+              Конюшенная, д. 19/8<br>
+              Санкт-Петербург</address>
+          </div>
           <img class="contacts__map" src="/img/contacts-images/map-image.png" width="320" height="362"
             alt="Карта с указанием адреса магазина">
         </div>
@@ -131,20 +143,24 @@
           <div class="bottom-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+                <a class="social__link social__link--vkontakte" href="#"></a>
+                <img src="./img/footer-icons/vk-logo.svg" alt="Мы в Вконтакте">
               </li>
               <li class="social__item">
-                <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
+                <a class="social__link social__link--youtube" href="#"></a>
+                <img src="./img/footer-icons/you-tube-logo.svg" ail="Мы в Ютубе">
               </li>
               <li class="social__item">
-                <a class="social__link social__link--telegram" href="#">Мы в Телеграме</a>
+                <a class="social__link social__link--telegram" href="#"></a>
+                <img src="./img/footer-icons/telegram-logo.svg" alt="Мы в Телеграмe">
               </li>
             </ul>
           </div>
           <div class="bottom-footer__copyright copyright">
             <b class="copyright__text">HTML Academy</b>
             <a class="copyright__link" href="#">
-              <img src="#" class="copyright__image" width="27" height="34" alt="Логотип разработчика">
+              <img src="./img/footer-icons/html-academy-logo.svg" class="copyright__image" width="27" height="34"
+                alt="Логотип разработчика">
             </a>
           </div>
         </div>
