@@ -1,10 +1,35 @@
 .basic-catalog {
-  padding: 27px 0 0;
   border: 2px solid red;
+}
+
+.basic-catalog__wrapper {
+  padding-top: 27px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-top: 65px;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 74px;
+    padding-bottom: 76px;
+  }
+
 }
 
 .basic-catalog__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  margin: 0;
+  padding-bottom: 49px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 84px;
+  }
 }

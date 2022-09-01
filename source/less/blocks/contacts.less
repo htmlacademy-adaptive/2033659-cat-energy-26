@@ -3,11 +3,20 @@
 }
 
 .contacts__wrapper {
+
+
   @media (min-width: @desktop-width) {
     position: relative;
     min-height: 400px;
+    background-color: @background-color;
   }
 }
+.contacts__wrapper-additionally-color {
+  
+  background-color: @background-additional;
+}
+
+
 
 .contacts__invitation-wrapper {
   border: 2px solid red;
@@ -29,15 +38,6 @@
     background-color: @background-color;
   }
 }
-.contacts__invitation-wrapper-form {
-  background-color: @background-additional;
-
-  @media (min-width: @desktop-width) {
-    background-color: @background-color;
-  }
-}
-
-
 
 .contacts__invitation {
   display: inline-block;

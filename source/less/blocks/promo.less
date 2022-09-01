@@ -6,6 +6,19 @@
   border: 2px solid red;
   background-image: url(../../img/catalog-images/image-gift.jpg);
 
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    width: 707px;
+    height: 200px;
+    background-image: url(../../img/catalog-images/image-gift-tablet.jpg)
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 290px;
+    background-image: url(../../img/catalog-images/image-gift-desktop.jpg)
+  }
+
+
   &::after {
     position: absolute;
     top: 0;

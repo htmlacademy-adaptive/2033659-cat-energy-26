@@ -1,11 +1,65 @@
 .additionally {
   border: 2px solid red;
-  padding: 25px 0 0;
 }
+
+.additionally__wrapper {
+  padding-bottom: 35px;
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-bottom: 76px;
+  }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 86px;
+  }
+}
+
+
 .additionally__title {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: @title-color;
+  margin: 0;
+  padding-bottom: 36px;
+  padding-top: 25px;
+
+    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 81px;
+  }
+}
+
+.additionally__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 844px;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    min-height: 825px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    min-height: 288px;
+  }
+}
+
+.additionally__list {
+  min-height: 519px;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    min-height: 556px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 896px;
+    min-height: 288px;
+  }
+
 }

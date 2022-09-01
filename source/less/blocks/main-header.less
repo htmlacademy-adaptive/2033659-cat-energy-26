@@ -1,26 +1,27 @@
 .main-header {
-  padding: 10px 20px 17px;
   border: 2px solid red;
 
   @media (min-width: @tablet-width) {
-    padding: 24px 0 0;
+
   }
 
   @media (min-width: @desktop-width) {
-    padding: 53px 0 0;
-    position: relative;
-    z-index: 1;
+
   }
 }
 
 
 .main-header__wrapper {
+  padding-top: 10px;
+  padding-bottom: 17px;
   display: flex;
   flex-direction: column;
   min-height: 65px;
 
 
   @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
     min-height: 52px;
@@ -28,8 +29,11 @@
 
 
   @media (min-width: @desktop-width) {
+    padding-top: 53px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
     min-height: 59px;
-
   }
 }
 
