@@ -6,7 +6,7 @@
   min-height: 480px;
   position: relative;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     min-height: 874px;
   }
 
@@ -35,16 +35,18 @@
     content: '';
   }
 
-    @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    @media (min-width: @tablet-width) {
     display: none;
   }
 
     @media (min-width: @desktop-width) {
+    position: absolute;
     display: block;
     background: url(../../img/hero-images/hero-background-desktop.jpg) 0 50% no-repeat;
     width: 720px;
     height: 694px;
-    left: 608px;
+    left: auto;
+    right: 0;
   }
 
 }
@@ -54,7 +56,7 @@
   top: 27px;
   left: 36px;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     top: 64px;
     left: 117px;
   }
@@ -106,7 +108,7 @@
   top: 167px;
   margin: 0;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
     top: 265px;
