@@ -18,7 +18,8 @@
 
 .contacts__invitation-wrapper {
   outline: 2px solid red;
-  padding: 26px 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
   justify-content: space-between;
 
@@ -62,19 +63,20 @@
 }
 
 .contacts__map {
-  position: relative;
-  left: -20px;
+  min-height: 362px;
+  background-image: url(../../img/contacts-images/map-image.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     min-width: 768px;
     min-height: 400px;
-    left: -30px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     min-width: 1440px;
     min-height: 400px;
-    left: 0;
   }
 }
