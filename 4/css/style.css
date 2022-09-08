@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -27,21 +27,21 @@ ol {
   padding: 0;
 }
 @font-face {
-  font-family: Oswald;
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/oswaldregular.woff2) format("woff2"), url(../fonts/oswaldregular.woff) format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: Oswald;
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   src: url(../fonts/oswaldmedium.woff2) format("woff2"), url(../fonts/oswaldmedium.woff) format("woff");
   font-display: swap;
 }
 .wrapper {
-  border: 2px solid red;
+  outline: 2px solid red;
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
@@ -59,7 +59,7 @@ ol {
   }
 }
 .main-header {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .main-header__wrapper {
   padding-top: 10px;
@@ -142,7 +142,7 @@ ol {
 }
 .hero {
   padding: 0;
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .hero__wrapper {
   min-height: 480px;
@@ -292,7 +292,7 @@ ol {
   }
 }
 .programs {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .programs__wrapper {
   display: flex;
@@ -353,7 +353,7 @@ ol {
   margin: 0;
 }
 .programs__description {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
@@ -367,7 +367,7 @@ ol {
   color: #000000;
 }
 .features {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .features__wrapper {
   min-height: 429px;
@@ -411,10 +411,10 @@ ol {
 }
 .features__item {
   min-height: 60px;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 @media (min-width: 768px) {
   .features__item {
@@ -440,14 +440,14 @@ ol {
   margin: 0;
 }
 .features__description {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
   margin: 0;
 }
 .example {
-  border: 2px solid red;
+  outline: 2px solid red;
   background-color: #F2F2F2;
 }
 .example__wrapper {
@@ -476,7 +476,7 @@ ol {
   }
 }
 .example__content-wrapper {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -496,7 +496,7 @@ ol {
   }
 }
 .example__lead-wrapper {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .example__title {
   font-weight: 400;
@@ -516,14 +516,14 @@ ol {
   }
 }
 .example__lead {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
   margin: 0;
 }
 .example__results-wrapper {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   min-height: 110px;
@@ -543,7 +543,7 @@ ol {
   }
 }
 .example__list {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -559,14 +559,14 @@ ol {
   color: #000000;
 }
 .example__description {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 100%;
   color: #444444;
   margin: 0;
 }
 .example__price {
-  border: 2px solid red;
+  outline: 2px solid red;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -575,7 +575,7 @@ ol {
   margin: 0;
 }
 .example__gallery {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   width: 280px;
   height: 256px;
@@ -593,7 +593,7 @@ ol {
   color: #000000;
 }
 .contacts {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .contacts__wrapper {
   position: relative;
@@ -609,8 +609,9 @@ ol {
   background-color: #F2F2F2;
 }
 .contacts__invitation-wrapper {
-  border: 2px solid red;
-  padding: 26px 0;
+  outline: 2px solid red;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
   justify-content: space-between;
 }
@@ -623,8 +624,9 @@ ol {
   .contacts__invitation-wrapper {
     position: absolute;
     top: 95px;
+    left: 110px;
     min-height: 198px;
-    min-width: 565px;
+    width: 565px;
     padding: 56px 80px;
     z-index: 1;
     background-color: #FFFFFF;
@@ -642,7 +644,7 @@ ol {
 .contacts__text {
   display: inline-block;
   min-width: 139px;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
@@ -655,13 +657,16 @@ ol {
 }
 .contacts__map {
   position: relative;
-  left: -20px;
+  min-height: 362px;
+  background-image: url(../../img/contacts-images/map-image.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .contacts__map {
     min-width: 768px;
     min-height: 400px;
-    left: -30px;
   }
 }
 @media (min-width: 1440px) {
@@ -669,14 +674,13 @@ ol {
     position: absolute;
     min-width: 1440px;
     min-height: 400px;
-    left: 0;
   }
 }
 .bottom {
-  border: 2px solid red;
+  outline: 2px solid red;
+  background-color: #F2F2F2;
 }
 .bottom__wrapper {
-  background-color: #F2F2F2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -700,7 +704,7 @@ ol {
   }
 }
 .bottom__text-logo {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: block;
   min-height: 95px;
   min-width: 280px;
@@ -714,7 +718,7 @@ ol {
   }
 }
 .bottom-footer__social {
-  border: 2px solid red;
+  outline: 2px solid red;
   min-height: 63px;
   min-width: 280px;
   padding: 20px 72px 21px;
@@ -727,7 +731,7 @@ ol {
   }
 }
 .bottom-footer__copyright {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -743,14 +747,14 @@ ol {
   }
 }
 .copyright__text {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
 }
 .form {
   padding: 27px 0 32px;
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 @media (min-width: 768px) {
   .form {
@@ -763,7 +767,7 @@ ol {
   }
 }
 .form__header {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -814,7 +818,7 @@ ol {
   border: none;
 }
 .form__cat-questionnaire-wrapper {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   min-height: 344px;
@@ -846,7 +850,7 @@ ol {
   color: #444444;
 }
 .input {
-  font-family: Oswald, sans-serif;
+  font-family: O "Oswald", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -855,7 +859,7 @@ ol {
   color: #444444;
 }
 .legend {
-  font-family: 'Oswald';
+  font-family: "Oswald", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
@@ -863,14 +867,14 @@ ol {
 }
 .button {
   background-color: #68B738;
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", "Helvetica", sans-serif;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 .basic-catalog {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .basic-catalog__wrapper {
   padding-top: 27px;
@@ -906,7 +910,7 @@ ol {
   }
 }
 .product-card {
-  border: 2px solid red;
+  outline: 2px solid red;
   padding: 8px 0 11px;
 }
 .product-card__title {
@@ -918,7 +922,7 @@ ol {
 }
 .product-card__property,
 .product-card__value {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -929,11 +933,11 @@ ol {
   line-height: 20px;
 }
 .all {
-  border: 2px solid red;
+  outline: 2px solid red;
   padding: 25px 0;
 }
 .all__title {
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -942,7 +946,7 @@ ol {
   color: #111111;
 }
 .all__text {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -953,7 +957,7 @@ ol {
   line-height: 20px;
 }
 .additionally {
-  border: 2px solid red;
+  outline: 2px solid red;
 }
 .additionally__wrapper {
   padding-bottom: 35px;
@@ -1020,7 +1024,7 @@ ol {
   }
 }
 .additional-product {
-  border: 2px solid red;
+  outline: 2px solid red;
   min-height: 130px;
   display: flex;
   flex-direction: column;
@@ -1049,7 +1053,7 @@ ol {
 }
 .additional-product__size,
 .additional-product__price {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -1060,7 +1064,7 @@ ol {
   line-height: 20px;
 }
 .additionally-button {
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", "Helvetica", sans-serif;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
@@ -1072,7 +1076,7 @@ ol {
   width: 280px;
   height: 290px;
   padding: 35px 0;
-  border: 2px solid red;
+  outline: 2px solid red;
   background-image: url(../../img/catalog-images/image-gift.jpg);
 }
 @media (min-width: 768px) {
@@ -1100,7 +1104,7 @@ ol {
 }
 .promo__text {
   position: relative;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -1144,7 +1148,7 @@ ol {
   }
 }
 .client-contacts__wrapper {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1212,7 +1216,7 @@ ol {
   }
 }
 .extra__list {
-  border: 2px solid red;
+  outline: 2px solid red;
   min-width: 280px;
   min-height: 191px;
   display: flex;
@@ -1238,7 +1242,7 @@ ol {
   }
 }
 .extra__item {
-  border: 2px solid red;
+  outline: 2px solid red;
   flex-basis: 30px;
 }
 @media (min-width: 768px) {
@@ -1247,7 +1251,7 @@ ol {
   }
 }
 .extra__button-wrapper {
-  border: 2px solid red;
+  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
