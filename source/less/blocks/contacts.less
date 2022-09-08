@@ -1,18 +1,84 @@
 .contacts {
-  border: 2px solid red;
+  outline: 2px solid red;
+}
+
+.contacts__wrapper {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    min-height: 400px;
+    background-color: @background-color;
+  }
+}
+.contacts__wrapper-additionally-color {
+
+  background-color: @background-additional;
+}
+
+.contacts__invitation-wrapper {
+  outline: 2px solid red;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 56px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    min-height: 198px;
+    width: 565px;
+    padding: 56px 80px;
+    z-index: 1;
+    background-color: @background-color;
+  }
 }
 
 .contacts__invitation {
+  display: inline-block;
+  min-width: 139px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #111111;
+  margin: 0;
 }
 
 .contacts__text {
-  font-family: Arial, sans-serif;
+  display:inline-block;
+  min-width: 139px;
+  font-family: @font-text;
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
   color: @text-color;
+
+  @media (min-width: @tablet-width) {
+    text-align: end;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  min-height: 362px;
+  background-image: url(../../img/contacts-images/map-image.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+    min-height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    min-width: 1440px;
+    min-height: 400px;
+  }
 }

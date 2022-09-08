@@ -3,8 +3,21 @@
   width: 280px;
   height: 290px;
   padding: 35px 0;
-  border: 2px solid red;
+  outline: 2px solid red;
   background-image: url(../../img/catalog-images/image-gift.jpg);
+
+  @media (min-width: @tablet-width) {
+    width: 707px;
+    height: 200px;
+    background-image: url(../../img/catalog-images/image-gift-tablet.jpg)
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 290px;
+    background-image: url(../../img/catalog-images/image-gift-desktop.jpg)
+  }
+
 
   &::after {
     position: absolute;
@@ -19,7 +32,7 @@
 
 .promo__text {
   position: relative;
-  font-family: Arial, sans-serif;
+  font-family: @font-text;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

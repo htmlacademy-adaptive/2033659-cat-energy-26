@@ -1,6 +1,21 @@
 .additional-product {
-  border: 2px solid red;
+  outline: 2px solid red;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
   padding: 13px 0 19px;
+
+  @media (min-width: @tablet-width){
+    min-height: 139px;
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    min-height: 72px;
+    padding: 15px 0 17px;
+  }
+
 }
 
 .additional-product__title {
@@ -9,10 +24,11 @@ font-size: 16px;
 line-height: 16px;
 text-transform: uppercase;
 color: @product-card-title-color;
+margin: 0;
 }
 
 .additional-product__size, .additional-product__price {
-  font-family: Arial, sans-serif;
+  font-family: @font-text;
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
@@ -23,4 +39,3 @@ color: @product-card-title-color;
 font-size: 16px;
 line-height: 20px;
 }
-
