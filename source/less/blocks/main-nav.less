@@ -5,13 +5,14 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-      min-width: 440px;
+      width: 440px;
       flex-direction: row;
+      flex-wrap: wrap;
 
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 478px;
+    width: 478px;
   }
 }
 
@@ -40,10 +41,17 @@
 
   @media (min-width: @tablet-width) {
     border-bottom: 2px solid @menu-underline-tablet;
+
+    &:hover {
+      border-bottom-color: rgba(0, 0, 0, 0.6);
+    }
   }
 
   @media (min-width: @desktop-width) {
     border-color: @menu-underline-desktop;
+    &:hover {
+      border-bottom-color: rgba(255, 255, 255, 0.6)
+    }
   }
 
 }
@@ -64,11 +72,17 @@
     line-height: 24px;
     padding-top: 12px;
     padding-bottom: 12px;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
+
   @media (min-width: @desktop-width) {
     padding-top: 14px;
     padding-bottom: 15px;
     font-size: 20px;
+    line-height: 30px;
     color: @promo-color;
   }
 }
