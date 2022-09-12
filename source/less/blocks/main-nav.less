@@ -45,12 +45,20 @@
     &:hover {
       border-bottom-color: rgba(0, 0, 0, 0.6);
     }
+
+    &:active {
+      border-bottom-color: rgba(0, 0, 0, 0.3);
+    }
   }
 
   @media (min-width: @desktop-width) {
     border-color: @menu-underline-desktop;
     &:hover {
-      border-bottom-color: rgba(255, 255, 255, 0.6)
+      border-bottom-color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      border-bottom-color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -75,6 +83,10 @@
 
     &:hover {
       opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 
