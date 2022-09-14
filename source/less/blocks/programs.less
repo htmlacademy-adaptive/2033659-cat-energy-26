@@ -217,6 +217,7 @@
   text-transform: uppercase;
   color: #000000;
   padding-right: 47px;
+  cursor: pointer;
   background: url(../../img/programs-icons/programs-arrow.svg) 100% 7px no-repeat;
 
   @media (min-width: @tablet-width) {
@@ -224,5 +225,9 @@
     line-height: 30px;
     padding-right: 55px;
     background-position: 100% 9px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
