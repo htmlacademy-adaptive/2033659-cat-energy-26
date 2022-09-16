@@ -47,10 +47,17 @@
   text-transform: uppercase;
   color: #111111;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__text {
-  display:inline-block;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   min-width: 139px;
   font-family: @font-text;
   font-style: normal;
@@ -60,10 +67,23 @@
 
   @media (min-width: @tablet-width) {
     text-align: end;
+    font-size: 16px;
+    line-height: 20px;
+  }
+   @media (min-width: @desktop-width) {
+    text-align: start;
+   }
+}
+
+.contacts__address {
+  @media (min-width: @tablet-width) {
+  display: inline-block;
+  margin-bottom: 19px;
   }
 }
 
 .contacts__map {
+  display: block;
   position: relative;
   min-height: 362px;
   width: 100%;
@@ -79,5 +99,16 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     min-height: 400px;
+  }
+}
+
+.contacts__map iframe {
+  border: none;
+  display: block;
+  height: 362px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
   }
 }

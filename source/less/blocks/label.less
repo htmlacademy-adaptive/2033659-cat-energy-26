@@ -1,8 +1,21 @@
 .label {
+  display: block;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: @text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
+.label--radio {
+  padding: 3px 0 3px 45px;
+  position: relative;
 
+  @media (min-width: @tablet-width) {
+    padding: 5px 0 5px 60px;
+  }
+}

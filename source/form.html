@@ -20,17 +20,17 @@
         <nav class="main-header__navigation main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="index.html">
+              <a class="main-nav__list-link main-nav__list-link--black" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="main-nav__list-item main-nav__list-item--active">
-              <a class="main-nav__list-link" href="catalog.html">
+            <li class="main-nav__list-item">
+              <a class="main-nav__list-link main-nav__list-link--black" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
             <li class="main-nav__list-item">
-              <a class="main-nav__list-link" href="#">
+              <a class="main-nav__list-link main-nav__list-link--black main-nav__list-item--active" href="#">
                 Подбор программы
               </a>
             </li>
@@ -47,15 +47,15 @@
         </div>
         <div class="form__cat-questionnaire-wrapper">
           <fieldset class="form__fieldset cat-questionnaire">
-            <p class="cat-questionnaire__name">
+            <p class="cat-questionnaire__form-field cat-questionnaire__form-field--name">
               <label class="label" for="name">Имя:*</label>
               <input class="input" type="text" id="name" value="Барсик" required>
             </p>
-            <p class="cat-questionnaire__weight">
+            <p class="cat-questionnaire__form-field cat-questionnaire__form-field--weight">
               <label class="label" for="name">Вес (кг):*</label>
               <input class="input" type="text" id="name" value="7" required>
             </p>
-            <p class="cat-questionnaire__age">
+            <p class="cat-questionnaire__form-field cat-questionnaire__form-field--age">
               <label class="label" for="name">Возраст (лет):</label>
               <input class="input" type="text" id="name" value="7">
             </p>
@@ -63,18 +63,24 @@
           <fieldset class="form__fieldset objective">
             <ul class="objective__list">
               <li class="ojective__item">
-                <label class="label">
-                  <input type="radio" name="objective" value="diet" checked>Похудение
+                <label class="label label--radio">
+                  <input class="radio visually-hidden" type="radio" name="objective" value="diet" checked>
+                  <span class="radio__control-mark"></span>
+                  Похудение
                 </label>
               </li>
               <li class="ojective__item">
-                <label class="label">
-                  <input type="radio" name="objective" value="fat">Набор массы
+                <label class="label label--radio">
+                  <input class="radio visually-hidden" type="radio" name="objective" value="fat">
+                  <span class="radio__control-mark"></span>
+                  Набор массы
                 </label>
               </li>
               <li class="ojective__item">
-                <label class="label">
-                  <input type="radio" name="objective" value="unknown">Не знаю (Нужен ваш совет)
+                <label class="label label--radio">
+                  <input class="radio visually-hidden" type="radio" name="objective" value="unknown">
+                  <span class="radio__control-mark"></span>
+                  Не знаю (Нужен ваш совет)
                 </label>
               </li>
             </ul>
@@ -165,5 +171,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

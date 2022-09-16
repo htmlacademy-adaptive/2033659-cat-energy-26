@@ -1,0 +1,42 @@
+.radio + .radio__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #CDCDCD;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  &:hover {
+    border-color: #BABABA;
+  }
+}
+
+.radio:disabled + .radio__control-mark {
+  opacity: 0.3;
+}
+
+.radio:checked + .radio__control-mark::after {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: @button-background;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 10px;
+    left: 10px;
+  }
+}

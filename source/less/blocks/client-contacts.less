@@ -1,13 +1,57 @@
 .client-contacts__legend {
   padding: 0 93px 35px 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 0 157px 76px 39px;
+    padding: 0 156px 76px 39px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 708px 76px 0;
+    padding: 0 706px 76px 0;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: @button-background;
+    height: 2px;
+    top: 15px;
+    right: -20px;
+    width: 99px;
+
+    @media (min-width: @tablet-width) {
+      top: 23px;
+      right: -30px;
+      width: 145px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -110px;
+      width: 778px;
+
+    }
+  }
+
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 23px;
+      background: @button-background;
+      height: 2px;
+      width: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -110px;
+      width: 70px;
+    }
+
+  }
+
+
 }
 
 .client-contacts__wrapper {

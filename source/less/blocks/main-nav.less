@@ -98,3 +98,25 @@
     color: @promo-color;
   }
 }
+
+.main-nav__list-link--black {
+
+  @media (min-width: @desktop-width) {
+    color: @title-color;
+  }
+
+}
+.main-nav__list-link--black.main-nav__list-item--active {
+  @media (min-width: @desktop-width) {
+      border-color: @menu-underline-tablet;
+
+      &:hover {
+        border-bottom-color: rgba(255, 255, 255, 0.6);
+      }
+
+      &:active {
+        border-bottom-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+}

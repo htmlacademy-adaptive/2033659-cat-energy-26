@@ -1,9 +1,17 @@
 .input {
-  font-family: O@font-common;
+  font-family: @font-common;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: @text-color;
+  height: 46px;
+  border: 1px solid @border-label;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    height: 52px;
+  }
 }
