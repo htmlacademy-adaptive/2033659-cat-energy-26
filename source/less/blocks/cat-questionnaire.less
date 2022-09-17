@@ -8,6 +8,10 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
 }
 
 .cat-questionnaire__form-field {
@@ -34,18 +38,5 @@
   .label {
     margin-right: 16px;
     white-space: nowrap;
-  }
-
-  .input {
-    width: 100%;
-    padding: 13px 14px;
-
-    @media (min-width: @tablet-width) {
-      padding: 11px 19px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 569px;
   }
 }

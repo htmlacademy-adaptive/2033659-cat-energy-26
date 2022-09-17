@@ -8,10 +8,30 @@
   color: @text-color;
   height: 46px;
   border: 1px solid @border-label;
+  width: 100%;
+  padding: 14px 15px;
+  outline: none;
+
+  &:hover {
+    border-color: @border-example;
+  }
+
+  &:focus {
+    border-color: @additionally-button-color;
+  }
+
+  &:invalid {
+    border-color: @error-color;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     height: 52px;
+    padding: 11px 51px 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }

@@ -5,4 +5,15 @@
   text-align: center;
   text-transform: uppercase;
   color: @button-text-color;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: @button-background-hover;
+  }
+
+  &:active {
+    background-color: @button-background-hover;
+    color: rgba(255, 255, 255, 0.3)
+  }
 }

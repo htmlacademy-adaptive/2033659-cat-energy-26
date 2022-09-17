@@ -1,0 +1,40 @@
+.checkbox__control-mark {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @border-example;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    border-color: #BABABA;
+  }
+}
+
+.checkbox:checked + .checkbox__control-mark {
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 14px;
+    top: 7px;
+    left: 5px;
+    background: url(../../img/form-icons/icon-check-mark.svg) 0 0 no-repeat;
+
+    @media (min-width: @tablet-width) {
+      background-size: cover;
+      width: 24px;
+      height: 18px;
+      top: 10px;
+      left: 7px;
+    }
+
+  }
+}
