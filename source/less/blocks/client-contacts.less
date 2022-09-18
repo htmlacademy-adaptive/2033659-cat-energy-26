@@ -1,34 +1,96 @@
 .client-contacts__legend {
-  padding: 0 93px 35px 0;
+  padding-bottom: 35px;
+
+  &::after {
+    width: 99px;
+    @media (min-width: @tablet-width) {
+      width: 145px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 778px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 0 157px 76px 39px;
+    padding-bottom: 76px;
+    padding-left: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 708px 76px 0;
+    padding: 0 706px 76px 0;
   }
 }
 
 .client-contacts__wrapper {
-  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 280px;
+  width: 100%;
   min-height: 104px;
-  padding: 0 0 24px;
+  margin: 0 0 24px;
+
 
   @media (min-width: @tablet-width)  {
-    min-width: 635px;
+    width: 635px;
     min-height: 124px;
-    padding: 0 35px 65px 38px;
+    margin: 0 35px 65px 38px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     min-height: 50px;
-    min-width: 1220px;
-    padding: 0 0 69px;
+    width: 1220px;
+    margin: 0 0 69px;
   }
+}
+
+.client-contacts__email, .client-contacts__phone {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: baseline;
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.client-contacts__label {
+  margin-right: 10px;
+  white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
+}
+
+.client-contacts__input {
+  width: 100%;
+
+  &--email {
+    background: url(../../img/form-icons/icon-email.svg) 95% 50% no-repeat;
+
+    &:focus {
+      background-image: url(../../img/form-icons/icon-email-green.svg);
+    }
+
+    &:invalid {
+      background-image: url(../../img/form-icons/icon-email-red.svg)
+    }
+  }
+
+  &--phone {
+    background: url(../../img/form-icons/icon-phone.svg) 95% 50% no-repeat;
+
+    &:focus {
+      background-image: url(../../img/form-icons/icon-phone-green.svg);
+    }
+
+    &:invalid {
+      background-image: url(../../img/form-icons/icon-phone-red.svg)
+    }
+  }
+
 }

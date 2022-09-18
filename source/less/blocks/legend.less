@@ -1,7 +1,55 @@
 .legend {
+  position: relative;
   font-family: @font-common;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
   color: @title-color;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: @button-background;
+      height: 2px;
+      top: 15px;
+      right: -20px;
+      width: 100%;
+
+      @media (min-width: @tablet-width) {
+        top: 23px;
+        right: -30px;
+        width: 145px;
+      }
+
+      @media (min-width: @desktop-width) {
+        right: -110px;
+        width: 778px;
+
+      }
+    }
+
+
+    &::before {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 23px;
+        background: @button-background;
+        height: 2px;
+        width: 30px;
+      }
+
+      @media (min-width: @desktop-width) {
+        left: -110px;
+        width: 70px;
+      }
+
+    }
 }

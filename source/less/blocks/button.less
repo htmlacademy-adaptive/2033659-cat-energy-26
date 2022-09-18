@@ -5,4 +5,33 @@
   text-align: center;
   text-transform: uppercase;
   color: @button-text-color;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: @button-background-hover;
+  }
+
+  &:active {
+    background-color: @button-background-hover;
+    color: rgba(255, 255, 255, 0.3)
+  }
+}
+
+.button--additionally {
+  font-family: @font-common;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: @additionally-button-color;
+  background-color: @additionally-button-background;
+
+  &:hover {
+    background-color: @additionally-button-background-hover;
+  }
+
+  &:active {
+    background-color: @additionally-button-background-hover;
+    color: rgba(68, 68, 68, 0.3)
+  }
 }

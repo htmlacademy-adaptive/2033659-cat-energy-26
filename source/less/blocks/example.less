@@ -1,5 +1,4 @@
 .example {
-  outline: 2px solid red;
   background-color: @background-additional;
 }
 
@@ -28,7 +27,6 @@
 }
 
 .example__content-wrapper {
-  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,11 +44,6 @@
   }
 }
 
-.example__lead-wrapper {
-  outline: 2px solid red;
-}
-
-
 .example__title {
   font-weight: 400;
   font-size: 36px;
@@ -58,15 +51,15 @@
   color: @title-color;
   margin: 0 0 40px;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     margin: 0 0 63px;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 0 146px;
   }
-
-
 }
 
 .example__lead {
@@ -75,10 +68,15 @@
   line-height: 18px;
   color: @text-color;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+  font-size: 16px;
+  line-height: 24px;
+  padding-right: 30px;
+  }
 }
 
 .example__results-wrapper {
-  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   min-height: 110px;
@@ -98,7 +96,6 @@
 }
 
 .example__list {
-  outline: 2px solid red;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -108,32 +105,80 @@
   }
 }
 
+.example__item {
+  position: relative;
+}
+
 .example__number {
   font-size: 24px;
   line-height: 24px;
   color: @title-color;
+  width: 124px;
+  height: 56px;
+  text-align: center;
+  border: 1px solid @border-example;
+  border-radius: 3px;
+  padding-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    height: 77px;
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__description {
+  position: absolute;
+  display: block;
   font-family: @font-text;
   font-size: 12px;
-  line-height: 100%;
+  line-height: 12px;
   color: @text-color;
   margin: 0;
+  width: 77px;
+  min-height: 24px;
+  text-align: center;
+  background-color: @background-additional;
+  top: 46px;
+  left: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 127px;
+    min-height: 14px;
+    font-size: 14px;
+    line-height: 14px;
+    top: 63px;
+    left: 17px;
+  }
 }
 
 .example__price {
-  outline: 2px solid red;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
   color: @title-color;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: end;
+    padding-top: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 327px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .example__gallery {
-  outline: 2px solid red;
   display: flex;
   width: 280px;
   height: 256px;

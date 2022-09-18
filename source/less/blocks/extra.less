@@ -1,7 +1,17 @@
 .extra__legend {
   padding: 0 139px 34px 0;
 
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  &::after {
+    width: 136px;
+    @media (min-width: @tablet-width) {
+      width: 446px;
+    }
+    @media (min-width: @desktop-width) {
+      width: 1078px;
+    }
+}
+
+  @media (min-width: @tablet-width) {
     padding: 0 457px 57px 40px;
   }
 
@@ -11,7 +21,6 @@
 }
 
 .extra__list {
-  outline: 2px solid red;
   min-width: 280px;
   min-height: 191px;
   display: flex;
@@ -36,30 +45,50 @@
 }
 
 .extra__item {
-  outline: 2px solid red;
   flex-basis: 30px;
 
   @media (min-width: @tablet-width) {
     flex-basis: 221px;
   }
+  .label {
+    position: relative;
+    padding: 5px 0 5px 42px;
+    @media (min-width: @tablet-width) {
+      padding-left: 59px;
+    }
+  }
 }
 
 .extra__button-wrapper {
-  outline: 2px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-
+  min-height: 77px;
 
   @media (min-width: @tablet-width) {
+    justify-content: flex-start;
     flex-direction: row;
     margin-left: 40px;
     margin-right: 103px;
+    min-height: 52px;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 0;
     margin-right: 0;
   }
+}
+.extra__text {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: @font-text;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+  }
+
+
 }

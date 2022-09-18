@@ -1,6 +1,16 @@
 .comment__legend {
   padding: 0 159px 38px 0;
 
+  &::after {
+    width: 158px;
+    @media (min-width: @tablet-width) {
+      width: 478px;
+    }
+    @media (min-width: @desktop-width) {
+      width: 1108px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0 487px 76px 36px;
   }
@@ -12,17 +22,20 @@
 
 .comment__textarea {
   min-height: 151px;
-  min-width: 280px;
+  width: 280px;
   margin: 0 0 23px;
+  padding: 15px 9px;
+  resize: none;
 
   @media (min-width: @tablet-width) {
     min-height: 174px;
-    min-width: 631px;
+    width: 631px;
     margin: 0 37px 65px 40px;
+    padding: 10px 19px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 1220px;
+    width: 1220px;
     margin: 0 0 67px;
   }
 }

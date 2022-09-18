@@ -9,7 +9,7 @@
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper wrapper">
-        <div class="main-header__logo-wrapper">
+        <div class="main-header__logo-wrapper main-header__logo-wrapper--nav-closed main-header__logo-wrapper--nojs">
           <a class="main-header__logo logo" href="index.html">
             <img class="logo__mobile" src="/img/logos/logo-mobile.svg" width="33" height="38" alt="Cat energy">
           </a>
@@ -20,12 +20,12 @@
         </div>
         <nav class="main-header__navigation main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__list-item">
+            <li class="main-nav__list-item main-nav__list-item--active">
               <a class="main-nav__list-link" href="#">
                 Главная
               </a>
             </li>
-            <li class="main-nav__list-item main-nav__list-item--active">
+            <li class="main-nav__list-item">
               <a class="main-nav__list-link" href="catalog.html">
                 Каталог продукции
               </a>
@@ -58,11 +58,13 @@
           <h2 class="visually-hidden">Виды программ питания</h2>
           <ul class="programs__list">
             <li class="programs__item programs__item--slim">
+              <div class="programs__icon-image programs__icon-image--slim"></div>
               <h3 class="programs__title">Похудение</h3>
               <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="programs__link" href="catalog/slim.html">Каталог slim</a>
             </li>
             <li class="programs__item programs__item--pro">
+              <div class="programs__icon-image programs__icon-image--pro"></div>
               <h3 class="programs__title">Набор массы</h3>
               <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="programs__link" href="catalog/fat.html">Каталог pro</a>
@@ -74,7 +76,7 @@
         <div class="features__wrapper wrapper">
           <h2 class="features__title">Как это работает</h2>
           <ol class="features__list">
-            <li class="features__item features__item--helthy ">
+            <li class="features__item features__item--helthy">
               <span class="features__description">Функциональное питание<br>
                 содержит только полезные<br>
                 питательные вещества.</span>
@@ -92,7 +94,7 @@
             <li class="features__item features__item--fast">
               <p class="features__description">Уже через месяц<br>
                  наслаждайтесь изменениями<br>
-                  к лучшему вашего питомца!</p>
+                  к лучшему<br> вашего питомца!</p>
             </li>
           </ol>
         </div>
@@ -127,7 +129,10 @@
                   </dd>
                 </div>
               </dl>
-              <p class="example__price">Затраты на питание: 15 000 руб.</p>
+              <div class="example__price">
+                <span>Затраты на питание:</span>
+                <span>15 000 руб.</span>
+              </div>
           </div>
           </div>
           <div class="example__gallery slider">
@@ -154,11 +159,18 @@
           <div class="contacts__invitation-wrapper wrapper">
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts__invitation">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
-            <address class="contacts__text">ул. Большая<br>
-              Конюшенная, д. 19/8<br>
-              Санкт-Петербург</address>
+            <address class="contacts__text">
+              <span class="contacts__address">ул. Большая<br>
+              Конюшенная, д. 19/8<br></span>
+              <span>Санкт-Петербург</span>
+            </address>
           </div>
-          <div class="contacts__map"></div>
+          <div class="contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002903!2d30.320858715847486!3d59.93871916905451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfr!4v1663320843101!5m2!1sru!2sfr"
+              style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Адрес магазина ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
+          </div>
         </div>
       </div>
       <div class="main-footer__bottom bottom">
@@ -174,7 +186,7 @@
               </li>
               <li class="social__item">
                 <a class="social__link social__link--youtube" href="#"></a>
-                 <img src="./img/footer-icons/you-tube-logo.svg" ail="Мы в Ютубе">
+                 <img src="./img/footer-icons/you-tube-logo.svg" alt="Мы в Ютубе">
               </li>
               <li class="social__item">
                 <a class="social__link social__link--telegram" href="#"></a>
@@ -191,5 +203,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
