@@ -1,6 +1,20 @@
 .all {
-  outline: 2px solid red;
-  padding: 25px 0;
+  border-top: 1px solid @border-catalog;
+  border-bottom: 1px solid @border-catalog;
+  margin: 0 -20px 0 -20px;
+  padding: 78px 20px 25px 20px;
+  background: url(../../img/catalog-images/plus.svg) 50% 25px no-repeat;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @border-all;
+    margin: 81px 0 0;
+    padding: 161px 38px 38px;
+    background: url(../../img/catalog-images/plus-tablet.svg) 50% 52px no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 163px;
+  }
 }
 
 .all__title {
@@ -11,17 +25,49 @@
   text-transform: uppercase;
   text-align: center;
   color: #111111;
+  margin: 0 0 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    width: 134px;
+    margin: 0 auto 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 27px;
+  }
 }
 
 .all__text {
+  display: block;
   font-family: @font-text;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: @text-color;
+  text-align: center;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+    margin: 0 auto 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 91px;
+  }
 }
 
 .all__button {
   font-size: 16px;
   line-height: 20px;
+  width: 280px;
+  min-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }

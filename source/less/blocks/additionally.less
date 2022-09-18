@@ -1,7 +1,3 @@
-.additionally {
-  outline: 2px solid red;
-}
-
 .additionally__wrapper {
   padding-bottom: 35px;
 
@@ -16,21 +12,67 @@
 
 
 .additionally__title {
+  position: relative;
+  display: block;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
   color: @title-color;
   margin: 0;
-  padding-bottom: 36px;
-  padding-top: 25px;
+  padding: 25px 0 36px 0;
+  border-bottom: 1px solid @border-example;
 
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
     padding-bottom: 80px;
+    border: none;
+    margin: 0;
+    padding: 0 0 80px 37px;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 81px;
+    padding-left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    background: @button-background;
+    height: 2px;
+    top: 39px;
+    right: -20px;
+    width: 53px;
+
+    @media (min-width: @tablet-width) {
+      width: 328px;
+      top: 23px;
+      right: -30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 957px;
+      right: -110px;
+    }
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 23px;
+      background: @button-background;
+      height: 2px;
+      width: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -110px;
+      width: 70px;
+    }
   }
 }
 
@@ -61,5 +103,20 @@
     min-width: 896px;
     min-height: 288px;
   }
+}
 
+.additionally__item {
+  border-bottom: 1px solid @border-example;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @border-example;
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    border-left: none;
+    border-right: none;
+  }
 }

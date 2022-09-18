@@ -1,41 +1,91 @@
 .additional-product {
-  outline: 2px solid red;
   min-height: 130px;
   display: flex;
   flex-direction: column;
   padding: 13px 0 19px;
 
-  @media (min-width: @tablet-width){
+  @media (min-width: @tablet-width) {
     min-height: 139px;
     padding: 26px 38px 28px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     min-height: 72px;
     padding: 15px 0 17px;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 
 }
 
 .additional-product__title {
-font-weight: 400;
-font-size: 16px;
-line-height: 16px;
-text-transform: uppercase;
-color: @product-card-title-color;
-margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @product-card-title-color;
+  margin: 0 0 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 286px;
+    margin-bottom: 0;
+  }
+}
+
+.additional-product__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 235px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    margin-bottom: 0;
+  }
 }
 
 .additional-product__size, .additional-product__price {
   font-family: @font-text;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: @text-color;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: @text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additional-product__size {
+  @media (min-width: @tablet-width) {
+    width: 135px;
+    text-align: right;
+  }
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .additional-product__button {
-font-size: 16px;
-line-height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 40px;
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
 }
