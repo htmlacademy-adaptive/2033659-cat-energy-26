@@ -5,3 +5,27 @@
   min-width: 132px;
   min-height: 22px;
 }
+.social__link {
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+
+.social__link--vkontakte,
+.social__link--youtube,
+.social__link--telegram {
+  svg {
+    fill: #666;
+  }
+  &:hover {
+    svg {
+      fill: @button-background;
+    }
+  }
+  &:active {
+    opacity: 0.3;
+    svg {
+      fill: @button-background;
+    }
+  }
+}

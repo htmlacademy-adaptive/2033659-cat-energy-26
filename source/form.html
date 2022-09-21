@@ -21,7 +21,9 @@
             </picture>
           </a>
           <a class="main-header__text-logo text-logo" href="index.html">
-            <img src="img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
+            <svg width="101" height="18">
+              <use xlink:href="img/sprite.svg#text-logo"></use>
+            </svg>
           </a>
           <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
@@ -153,7 +155,7 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
-        <div class="contacts__wrapper contacts__wrapper-additionally-color">
+        <div class="contacts__wrapper">
           <div class="contacts__invitation-wrapper wrapper">
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts__invitation">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
@@ -174,29 +176,41 @@
       <div class="main-footer__bottom bottom">
         <div class="bottom__wrapper wrapper">
           <a class="bottom__text-logo text-logo" href="index.html">
-            <img src="/img/logos/text-logo.svg" width="128" height="24" alt="Cat energy">
+            <svg width="128" height="24">
+              <use xlink:href="img/sprite.svg#text-logo"></use>
+            </svg>
           </a>
           <div class="bottom-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#"></a>
-                <img src="./img/footer-icons/vk-logo.svg" alt="Мы в Вконтакте">
+                <a class="social__link social__link--vkontakte" href="#">
+                  <svg width="27" height="17">
+                    <use xlink:href="img/sprite.svg#vkontakte"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--youtube" href="#"></a>
-                <img src="./img/footer-icons/you-tube-logo.svg" ail="Мы в Ютубе">
+                <a class="social__link social__link--youtube" href="#">
+                  <svg width="24" height="19">
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--telegram" href="#"></a>
-                <img src="./img/footer-icons/telegram-logo.svg" alt="Мы в Телеграмe">
+                <a class="social__link social__link--telegram" href="#">
+                  <svg width="20" height="18">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
           <div class="bottom-footer__copyright copyright">
-            <b class="copyright__text">HTML Academy</b>
             <a class="copyright__link" href="#">
-              <img src="./img/footer-icons/html-academy-logo.svg" class="copyright__image" width="27" height="34"
-                alt="Логотип разработчика">
+              <b class="copyright__text">HTML Academy</b>
+              <svg width="27" height="34" class="copyright__image">
+                <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
+              </svg>
             </a>
           </div>
         </div>
