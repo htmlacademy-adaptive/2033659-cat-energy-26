@@ -69,9 +69,39 @@
 
 }
 
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 280px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 163px;
+  }
+
+  &:hover {
+    .copyright__image {
+      fill: @button-background;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .copyright__image {
+      fill: @button-background;
+    }
+  }
+}
+
 .copyright__text {
-font-family: @font-text;
-font-size: 16px;
-line-height: 18px;
-color: @text-color;
+  display: block;
+  font-family: @font-text;
+  font-size: 16px;
+  line-height: 18px;
+  color: @text-color;
+}
+
+.copyright__image {
+  fill: #666;
 }
