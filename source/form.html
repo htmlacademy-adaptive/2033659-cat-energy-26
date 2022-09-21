@@ -2,18 +2,26 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon-180x180.png"> <!-- 180×180 -->
     <link rel="stylesheet" href="./css/style.css" type="text/css">
   </head>
   <body class="page__body">
     <header class="main-header">
       <div class="main-header__wrapper wrapper">
-        <div class="main-header__logo-wrapper">
+        <div class="main-header__logo-wrapper main-header__logo-wrapper--nav-closed main-header__logo-wrapper--nojs">
           <a class="main-header__logo logo" href="index.html">
-            <img class="logo__mobile" src="/img/logos/logo-mobile.svg" width="33" height="38" alt="Cat energy">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logos/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logos/logo-tablet.svg">
+              <img class="logo__mobile" src="img/logos/logo-mobile.svg" width="33" height="38" alt="Cat energy">
+            </picture>
           </a>
           <a class="main-header__text-logo text-logo" href="index.html">
-            <img src="/img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
+            <img src="img/logos/text-logo.svg" width="101" height="18" alt="Cat energy">
           </a>
           <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>

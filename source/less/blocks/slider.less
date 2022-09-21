@@ -1,0 +1,69 @@
+.slider__image {
+  position: absolute;
+  width: 280px;
+  height: 256px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+    width: 560px;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      height: 512px;
+      width: 560px;
+    }
+  }
+}
+
+.slider__image--before {
+  width: 50%;
+}
+
+.slider__image--after {
+  left: auto;
+  right: 0;
+  width: 50%;
+
+  img {
+    left: auto;
+    right: 0;
+  }
+}
+
+.slider__range {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  left: 50%;
+  background-color: #666666;
+  border-radius: 2px;
+  z-index: 1000;
+  margin-left: -2px;
+}
+
+.range__button {
+  position: absolute;
+  top: 108px;
+  left: -18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: @background-color;
+  background: url(../../img/example-images/slidebar-button.svg) 0 0 no-repeat;
+  outline: none;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    top: 236px;
+  }
+
+}
