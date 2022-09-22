@@ -5,6 +5,7 @@ import rename from 'gulp-rename';
 import csso from 'postcss-csso';
 import squoosh from 'gulp-libsquoosh';
 import postcss from 'gulp-postcss';
+import terser from 'gulp-terser';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import del from 'del';
@@ -26,9 +27,23 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// HTML
+const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(gulp.dest('build'));
+}
+
+// Scripts
+const scripts = () => {
+  return gulp.src('source/js/script.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
+  .pipe(browser.stream());
+}
+
 //Images
 export const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg,svg}')
   .pipe(gulp.dest('build/img'));
 }
 
@@ -36,6 +51,15 @@ const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'));
+}
+
+// WebP
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+  .pipe(squoosh({
+    webp: {}
+  }))
+  .pipe(gulp.dest('build/img'))
 }
 
 //Svg
@@ -47,7 +71,11 @@ const svg = () => {
 
 // Srites
 const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src([
+    'source/img/features-icons/*.svg',
+    'source/img/footer-icons/*.svg',
+    'source/img/form-icons/*.svg'
+  ])
   .pipe(svgo())
   .pipe(svgstore({
     inlineSvg: true
@@ -62,7 +90,7 @@ const copy = (done) => {
   return gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
-    'source/*.svg',
+    'source/img/*.svg',
   ], {
   base: 'source'
   })
@@ -89,25 +117,49 @@ const server = (done) => {
   done();
 }
 
-// Watcher
+// Reload
+const reload = (done) => {
+  browser.reload();
+  done();
+}
 
+// Watcher
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/*.html').on('change', reload);
 }
 
 //Build
 export const build = gulp.series(
   clean,
   copy,
-  copyImages,
   optimizeImages,
   gulp.parallel(
     styles,
-    sprite
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
   ),
 );
 
+// Default
+
 export default gulp.series(
-  styles, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+));
