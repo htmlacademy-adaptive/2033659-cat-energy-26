@@ -216,6 +216,10 @@
   cursor: pointer;
   background: url(../../img/programs-icons/programs-arrow.svg) 100% 7px no-repeat;
 
+  &:hover {
+    background-image: url(../../img/programs-icons/programs-arrow-long.svg);
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -224,6 +228,7 @@
   }
 
   &:active {
+    background-image: url(../../img/programs-icons/programs-arrow-long.svg);
     opacity: 0.3;
   }
 }

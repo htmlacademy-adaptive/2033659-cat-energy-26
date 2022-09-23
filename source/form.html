@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="icon" href="favicon.ico"> 
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
@@ -40,8 +40,8 @@
                 Каталог продукции
               </a>
             </li>
-            <li class="main-nav__list-item">
-              <a class="main-nav__list-link main-nav__list-link--black main-nav__list-item--active" href="#">
+            <li class="main-nav__list-item main-nav__list-item--active">
+              <a class="main-nav__list-link main-nav__list-link--black" href="#">
                 Подбор программы
               </a>
             </li>
@@ -63,34 +63,34 @@
               <input class="input" type="text" id="name" value="Барсик" required>
             </p>
             <p class="cat-questionnaire__form-field cat-questionnaire__form-field--weight">
-              <label class="label" for="name">Вес (кг):*</label>
-              <input class="input" type="text" id="name" value="7" required>
+              <label class="label" for="weight">Вес (кг):*</label>
+              <input class="input" type="text" id="weight" value="7" required>
             </p>
             <p class="cat-questionnaire__form-field cat-questionnaire__form-field--age">
-              <label class="label" for="name">Возраст (лет):</label>
-              <input class="input" type="text" id="name" value="7">
+              <label class="label" for="age">Возраст (лет):</label>
+              <input class="input" type="text" id="age" value="7">
             </p>
           </fieldset>
           <fieldset class="form__fieldset objective">
             <ul class="objective__list">
-              <li class="ojective__item">
+              <li class="objective__item">
                 <label class="label label--radio">
                   <input class="radio visually-hidden" type="radio" name="objective" value="diet" checked>
-                  <span class="radio__control-mark"></span>
+                  <span class="control-mark"></span>
                   Похудение
                 </label>
               </li>
-              <li class="ojective__item ">
+              <li class="objective__item ">
                 <label class="label label--radio">
                   <input class="radio visually-hidden" type="radio" name="objective" value="fat">
-                  <span class="radio__control-mark"></span>
+                  <span class="control-mark"></span>
                   Набор массы
                 </label>
               </li>
-              <li class="ojective__item">
+              <li class="objective__item">
                 <label class="label label--radio">
                   <input class="radio visually-hidden" type="radio" name="objective" value="unknown">
-                  <span class="radio__control-mark"></span>
+                  <span class="control-mark"></span>
                   Не знаю (Нужен ваш совет)
                 </label>
               </li>
@@ -103,11 +103,11 @@
           <div class="client-contacts__wrapper">
             <p class="client-contacts__email">
               <label class="client-contacts__label label" for="email">E-mail:*</label>
-              <input class="client-contacts__input--email input" type="email" id="email" value="kuklachev@gmail.com" required>
+              <input class="client-contacts__input client-contacts__input--email input" type="email" id="email" value="kuklachev@gmail.com" required>
             </p>
             <p class="client-contacts__phone">
               <label class="client-contacts__label label" for="phone">Телефон:*</label>
-              <input class="client-contacts__input--phone input"  type="tel" id="phone" value="8 (960) 900-60-90" required>
+              <input class="client-contacts__input client-contacts__input--phone input"  type="tel" id="phone" value="8 (960) 900-60-90" required>
             </p>
           </div>
         </fieldset>
@@ -121,28 +121,28 @@
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="sweetener" value="sweetener" checked>
-                <span class="checkbox__control-mark"></span>
+                <span class="control-mark"></span>
                 сахарозаменитель
               </label>
             </li>
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="woter" value="woter">
-                <span class="checkbox__control-mark"></span>
+                <span class="control-mark"></span>
                 питьевая вода
               </label>
             </li>
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="milk" value="milk">
-                <span class="checkbox__control-mark"></span>
+                <span class="control-mark"></span>
                 молоко
               </label>
             </li>
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="vitamins" value="vitamins">
-                <span class="checkbox__control-mark"></span>
+                <span class="control-mark"></span>
                 витамины
               </label>
             </li>
@@ -181,7 +181,7 @@
               <use xlink:href="img/sprite.svg#text-logo"></use>
             </svg>
           </a>
-          <div class="bottom-footer__social social">
+          <div class="bottom__footer-social social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--vkontakte" href="#">
@@ -198,7 +198,7 @@
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--telegram" href="#">
+                <a class="social__link social__link--telegram" href="">
                   <svg width="20" height="18">
                     <use xlink:href="img/sprite.svg#telegram"></use>
                   </svg>
@@ -206,8 +206,8 @@
               </li>
             </ul>
           </div>
-          <div class="bottom-footer__copyright copyright">
-            <a class="copyright__link" href="#">
+          <div class="bottom__footer-copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
               <b class="copyright__text">HTML Academy</b>
               <svg width="27" height="34" class="copyright__image">
                 <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>

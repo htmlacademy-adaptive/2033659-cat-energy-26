@@ -15,6 +15,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    max-width: none;
 
     @media (min-width: @tablet-width) {
       height: 512px;
@@ -48,9 +49,22 @@
   border-radius: 2px;
   z-index: 1000;
   margin-left: -2px;
+
+  &:hover, &:active {
+    background-color: #68B738;
+
+    .slider__range-button {
+      background-image: url(../../img/example-images/slidebar-button-hover.svg);
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
 }
 
-.range__button {
+.slider__range-button {
   position: absolute;
   top: 108px;
   left: -18px;

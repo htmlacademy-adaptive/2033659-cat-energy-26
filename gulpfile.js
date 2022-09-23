@@ -22,6 +22,7 @@ export const styles = () => {
       autoprefixer(),
       csso()
     ]))
+    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
