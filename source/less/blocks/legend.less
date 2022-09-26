@@ -12,44 +12,42 @@
     line-height: 36px;
   }
 
-    &::after {
-      position: absolute;
+  &::after {
+    position: absolute;
+    content: "";
+    background: @button-background;
+    height: 2px;
+    top: 15px;
+    right: -20px;
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+      top: 22px;
+      right: -30px;
+      width: 145px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -110px;
+      width: 778px;
+    }
+  }
+
+
+  &::before {
+    @media (min-width: @tablet-width) {
       content: "";
+      position: absolute;
+      left: -30px;
+      top: 22px;
       background: @button-background;
       height: 2px;
-      top: 15px;
-      right: -20px;
-      width: 100%;
-
-      @media (min-width: @tablet-width) {
-        top: 23px;
-        right: -30px;
-        width: 145px;
-      }
-
-      @media (min-width: @desktop-width) {
-        right: -110px;
-        width: 778px;
-
-      }
+      width: 30px;
     }
 
-
-    &::before {
-      @media (min-width: @tablet-width) {
-        content: "";
-        position: absolute;
-        left: -30px;
-        top: 23px;
-        background: @button-background;
-        height: 2px;
-        width: 30px;
-      }
-
-      @media (min-width: @desktop-width) {
-        left: -110px;
-        width: 70px;
-      }
-
+    @media (min-width: @desktop-width) {
+      left: -110px;
+      width: 70px;
     }
+  }
 }

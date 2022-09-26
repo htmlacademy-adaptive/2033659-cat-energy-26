@@ -8,13 +8,14 @@
   outline: none;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @button-background-hover;
   }
 
   &:active {
     background-color: @button-background-hover;
-    color: rgba(255, 255, 255, 0.3)
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -32,6 +33,6 @@
 
   &:active {
     background-color: @additionally-button-background-hover;
-    color: rgba(68, 68, 68, 0.3)
+    color: rgba(68, 68, 68, 0.3);
   }
 }

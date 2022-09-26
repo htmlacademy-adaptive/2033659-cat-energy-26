@@ -22,7 +22,7 @@
             </picture>
           </a>
           <a class="main-header__text-logo text-logo" href="index.html">
-            <svg width="101" height="18">
+            <svg width="101" height="18" aria-label="логотип компании Cat Energy">
               <use xlink:href="img/sprite.svg#text-logo"></use>
             </svg>
           </a>
@@ -60,15 +60,15 @@
           <fieldset class="form__fieldset cat-questionnaire">
             <p class="cat-questionnaire__form-field cat-questionnaire__form-field--name">
               <label class="label" for="name">Имя:*</label>
-              <input class="input" type="text" id="name" value="Барсик" required>
+              <input class="input" type="text" id="name" value="Барсик" name="name" required>
             </p>
             <p class="cat-questionnaire__form-field cat-questionnaire__form-field--weight">
               <label class="label" for="weight">Вес (кг):*</label>
-              <input class="input" type="text" id="weight" value="7" required>
+              <input class="input" type="text" id="weight" value="7" name="weight" required>
             </p>
             <p class="cat-questionnaire__form-field cat-questionnaire__form-field--age">
               <label class="label" for="age">Возраст (лет):</label>
-              <input class="input" type="text" id="age" value="7">
+              <input class="input" type="text" id="age" value="7" name="age">
             </p>
           </fieldset>
           <fieldset class="form__fieldset objective">
@@ -76,22 +76,22 @@
               <li class="objective__item">
                 <label class="label label--radio">
                   <input class="radio visually-hidden" type="radio" name="objective" value="diet" checked>
-                  <span class="control-mark"></span>
-                  Похудение
+                  <span class="radio__control-mark"></span>
+                  <span class="radio__control-label">Похудение</span>
                 </label>
               </li>
               <li class="objective__item ">
                 <label class="label label--radio">
                   <input class="radio visually-hidden" type="radio" name="objective" value="fat">
-                  <span class="control-mark"></span>
-                  Набор массы
+                  <span class="radio__control-mark"></span>
+                  <span class="radio__control-label">Набор массы</span>
                 </label>
               </li>
               <li class="objective__item">
                 <label class="label label--radio">
                   <input class="radio visually-hidden" type="radio" name="objective" value="unknown">
-                  <span class="control-mark"></span>
-                  Не знаю (Нужен ваш совет)
+                  <span class="radio__control-mark"></span>
+                  <span class="radio__control-label">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -121,29 +121,29 @@
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="sweetener" value="sweetener" checked>
-                <span class="control-mark"></span>
-                сахарозаменитель
+                <span class="checkbox__control-mark"></span>
+                <span class="checkbox__control-label">сахарозаменитель</span>
               </label>
             </li>
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="woter" value="woter">
-                <span class="control-mark"></span>
-                питьевая вода
+                <span class="checkbox__control-mark"></span>
+                <span class="checkbox__control-label">питьевая вода</span>
               </label>
             </li>
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="milk" value="milk">
-                <span class="control-mark"></span>
-                молоко
+                <span class="checkbox__control-mark"></span>
+                <span class="checkbox__control-label">молоко</span>
               </label>
             </li>
             <li class="extra__item">
               <label class="label">
                 <input class="checkbox visually-hidden" type="checkbox" name="vitamins" value="vitamins">
-                <span class="control-mark"></span>
-                витамины
+                <span class="checkbox__control-mark"></span>
+                <span class="checkbox__control-label">витамины</span>
               </label>
             </li>
           </ul>
@@ -156,7 +156,7 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__contacts contacts">
-        <div class="contacts__wrapper">
+        <div class="contacts__wrapper contacts__wrapper-additionally-color">
           <div class="contacts__invitation-wrapper wrapper">
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts__invitation">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
@@ -177,29 +177,29 @@
       <div class="main-footer__bottom bottom">
         <div class="bottom__wrapper wrapper">
           <a class="bottom__text-logo text-logo" href="index.html">
-            <svg width="128" height="24">
+            <svg width="128" height="24" aria-label="логотип Cat energy">
               <use xlink:href="img/sprite.svg#text-logo"></use>
             </svg>
           </a>
           <div class="bottom__footer-social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#">
-                  <svg width="27" height="17">
+                <a class="social__link social__link--vkontakte visually-hidden" href="#">
+                  <svg width="27" height="17" aria-label="мы в контакте">
                     <use xlink:href="img/sprite.svg#vkontakte"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--youtube" href="#">
-                  <svg width="24" height="19">
+                  <svg width="24" height="19" aria-label="мы в yoytube">
                     <use xlink:href="img/sprite.svg#youtube"></use>
                   </svg>
                 </a>
               </li>
               <li class="social__item">
                 <a class="social__link social__link--telegram" href="">
-                  <svg width="20" height="18">
+                  <svg width="20" height="18" aria-label="мы в telegram">
                     <use xlink:href="img/sprite.svg#telegram"></use>
                   </svg>
                 </a>

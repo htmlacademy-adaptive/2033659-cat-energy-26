@@ -4,7 +4,16 @@
   align-items: center;
   min-width: 132px;
   min-height: 22px;
+  padding-right: 8px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 150px;
+    padding-right: 0;
+    padding-left: 21px;
+  }
 }
+
+
 .social__link {
   display: flex;
   align-items: center;
@@ -15,15 +24,18 @@
 .social__link--youtube,
 .social__link--telegram {
   svg {
-    fill: #666;
+    fill: #666666;
   }
+
   &:hover {
     svg {
       fill: @button-background;
     }
   }
+
   &:active {
     opacity: 0.3;
+
     svg {
       fill: @button-background;
     }

@@ -1,26 +1,25 @@
-.radio + .control-mark {
+.radio + .radio__control-mark {
   position: absolute;
   top: 0;
   left: 0;
-  background: #FFF;
+  background: #ffffff;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #CDCDCD;
+  border: 1px solid #cdcdcd;
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
   }
 
-
   &:hover {
-    border-color: #BABABA;
+    border-color: #bababa;
   }
 }
 
-.radio:checked + .control-mark::after {
-  content: '';
+.radio:checked + .radio__control-mark::after {
+  content: "";
   position: absolute;
   top: 7px;
   left: 7px;
@@ -35,4 +34,9 @@
     top: 10px;
     left: 10px;
   }
+}
+
+.radio:disabled + .radio__control-mark,
+.radio:disabled + .radio__control-mark + .radio__control-label {
+  opacity: 0.3;
 }

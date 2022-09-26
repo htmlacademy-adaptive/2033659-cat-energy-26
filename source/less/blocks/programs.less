@@ -15,7 +15,6 @@
     padding-top: 82px;
     padding-bottom: 71px;
   }
-
 }
 
 .programs__list {
@@ -23,9 +22,15 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    gap: 80px;
   }
 }
 
@@ -39,13 +44,13 @@
   @media (min-width: @tablet-width) {
     min-width: 708px;
     min-height: 372px;
-    padding: 77px 316px 53px 52px;
+    padding: 75px 315px 53px 53px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 570px;
     min-height: 374px;
-    padding: 77px 51px 55px 52px ;
+    padding: 77px 51px 55px 52px;
     flex-basis: 570px;
   }
 }
@@ -58,10 +63,10 @@
   border-radius: 50%;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     background-size: contain;
-    background: transparent;
+    background-color: transparent;
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
@@ -86,11 +91,11 @@
     top: -3px;
     width: 36px;
     height: 50px;
-    background-image: url(../../img/programs-icons/cat-slim-icon.svg);
+    background-image: url("../../img/programs-icons/cat-slim-icon.svg");
   }
 
   @media (min-width: @tablet-width) {
-    top: 92px;
+    top: 90px;
     left: auto;
     right: 62px;
 
@@ -116,7 +121,6 @@
       background-size: contain;
     }
   }
-
 }
 
 .programs__icon-image--pro {
@@ -128,11 +132,11 @@
     top: 11px;
     width: 67px;
     height: 28px;
-    background-image: url(../../img/programs-icons/cat-big-icon.svg);
+    background-image: url("../../img/programs-icons/cat-big-icon.svg");
   }
 
   @media (min-width: @tablet-width) {
-    top: 91px;
+    top: 89px;
     left: auto;
     right: 60px;
 
@@ -158,7 +162,6 @@
       background-size: contain;
     }
   }
-
 }
 
 .programs__title {
@@ -181,7 +184,6 @@
     padding-left: 162px;
     margin-bottom: 73px;
   }
-
 }
 
 .programs__description {
@@ -197,12 +199,12 @@
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 0;
-    margin-bottom: 48px;
+    margin-bottom: 52px;
     border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   }
 }
 
@@ -214,21 +216,25 @@
   color: #000000;
   padding-right: 47px;
   cursor: pointer;
-  background: url(../../img/programs-icons/programs-arrow.svg) 100% 7px no-repeat;
+  background: url("../../img/programs-icons/programs-arrow.svg") 100% 5px no-repeat;
 
   &:hover {
-    background-image: url(../../img/programs-icons/programs-arrow-long.svg);
+    background-image: url("../../img/programs-icons/programs-arrow-long.svg");
   }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding-right: 55px;
+    padding-right: 58px;
     background-position: 100% 9px;
   }
 
+  @media (min-width: @desktop-width) {
+    padding-right: 60px;
+  }
+
   &:active {
-    background-image: url(../../img/programs-icons/programs-arrow-long.svg);
+    background-image: url("../../img/programs-icons/programs-arrow-long.svg");
     opacity: 0.3;
   }
 }

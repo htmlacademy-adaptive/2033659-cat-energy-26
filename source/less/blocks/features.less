@@ -5,9 +5,9 @@
   justify-content: space-between;
   padding-bottom: 49px;
 
-  @media (min-width: @tablet-width)  {
+  @media (min-width: @tablet-width) {
     min-height: 781px;
-    padding-top: 45px;
+    padding-top: 43px;
     padding-bottom: 47px;
   }
 
@@ -33,6 +33,7 @@
 
   @media (min-width: @desktop-width) {
     min-height: 280px;
+    justify-content: flex-start;
   }
 }
 
@@ -41,7 +42,6 @@
   min-height: 60px;
   font-family: @font-text;
   padding-left: 80px;
-
 
   &::before {
     position: absolute;
@@ -55,9 +55,12 @@
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
-      top: 40px;
+      top: 38px;
     }
 
+    @media (min-width: @desktop-width) {
+      top: 40px;
+    }
   }
 
   &::after {
@@ -68,28 +71,43 @@
     background-size: contain;
   }
 
-
   @media (min-width: @tablet-width) {
     width: 249px;
     min-height: 280px;
     flex-basis: 249px;
     margin-right: 75px;
     padding-left: 0;
-    padding-top: 151px;
+    padding-top: 150px;
   }
 
   @media (min-width: @desktop-width) {
     width: 250px;
     min-height: 280px;
     flex-basis: 250px;
-    margin-right: 0;
-}
+    margin-right: 75px;
 
+    &:nth-child(3n) {
+      margin-right: 72px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+      flex-basis: 245px;
+
+      &::before {
+        left: 3px;
+      }
+
+      &::after {
+        left: 27px;
+      }
+    }
+  }
 }
 
 .features__item--helthy {
   &::after {
-    background-image: url(../../img/features-icons/icon-leaf.svg);
+    background-image: url("../../img/features-icons/icon-leaf.svg");
     width: 30px;
     height: 32px;
     top: 14px;
@@ -102,13 +120,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    background: url(../../img/features-icons/1.svg) 70% 40px no-repeat;
+    background: url("../../img/features-icons/1.svg") 70% 40px no-repeat;
   }
 }
 
 .features__item--simply {
   &::after {
-    background-image: url(../../img/features-icons/icon-tub.svg);
+    background-image: url("../../img/features-icons/icon-tub.svg");
     width: 29px;
     height: 31px;
     top: 13px;
@@ -119,14 +137,15 @@
       left: 25px;
     }
   }
+
   @media (min-width: @tablet-width) {
-    background: url(../../img/features-icons/2.svg) 90% 40px no-repeat;
+    background: url("../../img/features-icons/2.svg") 90% 40px no-repeat;
   }
 }
 
 .features__item--diet {
   &::after {
-    background-image: url(../../img/features-icons/icon-eat.svg);
+    background-image: url("../../img/features-icons/icon-eat.svg");
     width: 25px;
     height: 30px;
     top: 15px;
@@ -137,14 +156,15 @@
       left: 28px;
     }
   }
+
   @media (min-width: @tablet-width) {
-    background: url(../../img/features-icons/3.svg) 90% 40px no-repeat;
+    background: url("../../img/features-icons/3.svg") 90% 40px no-repeat;
   }
 }
 
 .features__item--fast {
   &::after {
-    background-image: url(../../img/features-icons/icon-alarm.svg);
+    background-image: url("../../img/features-icons/icon-alarm.svg");
     width: 32px;
     height: 33px;
     top: 13px;
@@ -155,8 +175,9 @@
       left: 24px;
     }
   }
+
   @media (min-width: @tablet-width) {
-    background: url(../../img/features-icons/4.svg) 97% 40px no-repeat;
+    background: url("../../img/features-icons/4.svg") 97% 40px no-repeat;
   }
 }
 
@@ -173,7 +194,6 @@
     }
   }
 }
-
 
 .features__title {
   font-weight: 400;

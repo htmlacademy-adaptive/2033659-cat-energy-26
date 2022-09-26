@@ -1,6 +1,7 @@
 .hero {
   padding: 0;
 }
+
 .hero__wrapper {
   min-height: 480px;
   position: relative;
@@ -15,76 +16,102 @@
   }
 }
 
+.hero__wrapper-left {
+  @media (min-width: @desktop-width) {
+    width: 610px;
+  }
+}
+
 .hero__background {
-  display: block;
-  position: relative;
-  background: url(../../img/hero-images/hero-background.jpg) 0 50% no-repeat;
+  display: none;
+  background: url("../../img/hero-images/hero-background.jpg") right center no-repeat;
   background-color: rgba(104, 183, 56, 0.85);
-  width: 320px;
-  height: 302px;
+  background-size: cover;
   left: -20px;
 
   &::after {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background: rgba(104, 183, 56, 0.85);
-    content: '';
+    content: "";
   }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url(../../img/hero-images/hero-background@2x.jpg);
-    background-size: 320px auto;
-  }
-
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 
-    @media (min-width: @desktop-width) {
+  @media (min-width: @desktop-width) {
     position: absolute;
     display: block;
-    background: url(../../img/hero-images/hero-background-desktop.jpg) 0 50% no-repeat;
+    background-image: url("../../img/hero-images/hero-background-desktop.jpg");
     width: 720px;
-    height: 694px;
+    height: auto;
+    top: 0;
     left: auto;
     right: 0;
+    bottom: 0;
 
     @media (min-resolution: 2dppx) {
-      background-image: url(../../img/hero-images/hero-background-desktop@2x.jpg);
-      background-size: 720px auto;
+      background-image: url("../../img/hero-images/hero-background-desktop@2x.jpg");
+    }
+
+    &::after {
+      display: block;
     }
   }
-
 }
 
 .hero__text-wrapper {
-  position: absolute;
-  top: 27px;
-  left: 36px;
+  position: relative;
+  padding: 27px 34px 140px;
+  min-height: 302px;
+  margin-left: -20px;
+  margin-right: -20px;
+  background: url("../../img/hero-images/hero-background.jpg") center center no-repeat;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(104, 183, 56, 0.85);
+    content: "";
+    z-index: 0;
+  }
 
   @media (min-width: @tablet-width) {
-    top: 64px;
-    left: 117px;
+    margin: 0;
+    padding: 62px 88px 50px;
+    background: none;
+    min-height: 290px;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    top: 223px;
-    left: 190px;
+    padding-top: 223px;
+    padding-left: 80px;
   }
 }
 
 
 .hero__title {
-  display: inline-block;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   text-align: center;
   color: @promo-color;
   margin: 0 0 25px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
@@ -103,6 +130,7 @@
   text-align: center;
   color: @promo-color;
   margin: 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -112,23 +140,41 @@
   }
 }
 
+.hero__wrapper-button {
+  position: relative;
+  padding-top: 138px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 90px 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
+    padding-left: 80px;
+    padding-top: 1px;
+  }
+}
+
 .hero__image {
   position: absolute;
-  top: 167px;
+  top: -133px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
-    top: 265px;
-    left: 29px;
+    top: -29px;
+    left: 0;
+    z-index: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    top: 141px;
-    left: 558px;
+    top: -314px;
+    left: auto;
+    right: -390px;
+    z-index: 1;
   }
 }
 
@@ -136,25 +182,17 @@
   display: block;
   font-size: 14px;
   line-height: 18px;
-  position: absolute;
-  top: 440px;
   min-width: 280px;
   min-height: 40px;
   padding: 11px 44px;
 
   @media (min-width: @tablet-width) {
     min-width: 244px;
+    width: 244px;
     min-height: 54px;
-    top: 294px;
-    left: 120px;
     font-size: 20px;
     line-height: 20px;
     padding: 16px 26px;
-
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 455px;
-    left: 190px;
+    position: relative;
   }
 }

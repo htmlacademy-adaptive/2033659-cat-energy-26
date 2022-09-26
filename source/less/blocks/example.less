@@ -3,7 +3,7 @@
   background-color: @background-additional;
 
   &::after {
-    content: '';
+    content: "";
     right: 0;
     bottom: 0;
     left: 0;
@@ -12,7 +12,7 @@
     z-index: 0;
 
     @media (min-width: @tablet-width) {
-      top: 619px;
+      top: 617px;
     }
 
     @media (min-width: @desktop-width) {
@@ -23,7 +23,6 @@
   @media (min-width: @tablet-width) {
     background-color: @background-color;
   }
-
 }
 
 .example__wrapper {
@@ -38,7 +37,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 598px;
-    padding-top: 43px;
+    padding-top: 41px;
     padding-bottom: 101px;
     align-items: center;
   }
@@ -98,16 +97,16 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-  font-size: 16px;
-  line-height: 24px;
-  padding-right: 30px;
-  padding-bottom: 54px;
-}
-  @media (min-width: @desktop-width) {
-    padding-bottom: 64px;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 30px;
+    padding-bottom: 54px;
   }
 
-
+  @media (min-width: @desktop-width) {
+    padding-bottom: 64px;
+    padding-right: 5px;
+  }
 }
 
 .example__results-wrapper {
@@ -126,7 +125,6 @@
     min-width: 366px;
     min-height: 152px;
   }
-
 }
 
 .example__list {
@@ -152,13 +150,15 @@
   text-align: center;
   border: 1px solid @border-example;
   border-radius: 3px;
-  padding-top: 14px;
+  padding-top: 13px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 162px;
-    height: 77px;
+    height: 72px;
     font-size: 30px;
     line-height: 37px;
+    padding-top: 14px;
   }
 }
 
@@ -181,7 +181,7 @@
     min-height: 14px;
     font-size: 14px;
     line-height: 14px;
-    top: 68px;
+    top: 64px;
     background-color: @background-color;
 
     &--time {
@@ -211,9 +211,10 @@
   @media (min-width: @tablet-width) {
     width: 174px;
     font-size: 20px;
-    line-height: 27px;
+    line-height: 28px;
     text-align: end;
     padding-top: 8px;
+    padding-right: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -222,6 +223,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    line-height: 20px;
   }
 }
 
