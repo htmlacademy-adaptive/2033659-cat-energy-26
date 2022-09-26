@@ -1,8 +1,8 @@
-.checkbox + .control-mark {
+.checkbox + .checkbox__control-mark {
   display: block;
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
   width: 30px;
   height: 30px;
   border: 1px solid @border-example;
@@ -13,12 +13,11 @@
   }
 
   &:hover {
-    border-color: #BABABA;
+    border-color: #bababa;
   }
 }
 
-.checkbox:checked + .control-mark {
-
+.checkbox:checked + .checkbox__control-mark {
   &::after {
     position: absolute;
     content: "";
@@ -26,7 +25,7 @@
     height: 14px;
     top: 7px;
     left: 5px;
-    background: url(../../img/form-icons/icon-check-mark.svg) 0 0 no-repeat;
+    background: url("../../img/form-icons/icon-check-mark.svg") 0 0 no-repeat;
 
     @media (min-width: @tablet-width) {
       background-size: cover;
@@ -35,6 +34,10 @@
       top: 10px;
       left: 7px;
     }
-
   }
+}
+
+.checkbox:disabled + .checkbox__control-mark,
+.checkbox:disabled + .checkbox__control-mark + .checkbox__control-label {
+  opacity: 0.3;
 }

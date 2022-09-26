@@ -1,15 +1,14 @@
 .additionally__wrapper {
   padding-bottom: 35px;
 
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
     padding-bottom: 76px;
   }
 
-    @media (min-width: @desktop-width) {
-      padding-bottom: 86px;
+  @media (min-width: @desktop-width) {
+    padding-bottom: 86px;
   }
 }
-
 
 .additionally__title {
   position: relative;
@@ -26,7 +25,6 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-bottom: 80px;
     border: none;
     margin: 0;
     padding: 0 0 80px 37px;
@@ -39,7 +37,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     background: @button-background;
     height: 2px;
     top: 39px;
@@ -110,6 +108,7 @@
 
   @media (min-width: @tablet-width) {
     border: 1px solid @border-example;
+
     &:not(:last-child) {
       border-bottom: none;
     }

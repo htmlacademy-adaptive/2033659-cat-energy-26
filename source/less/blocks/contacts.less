@@ -7,18 +7,19 @@
     background-color: @background-color;
   }
 }
+
 .contacts__wrapper-additionally-color {
   background-color: @background-additional;
 }
 
 .contacts__invitation-wrapper {
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 24px;
+  padding-bottom: 27px;
   display: flex;
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 40px;
+    padding: 60px 70px 59px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,10 +47,14 @@
     font-size: 20px;
     line-height: 26px;
   }
+
+  @media (min-width: @desktop-width) {
+    line-height: 28px;
+  }
 }
 
 .contacts__text {
-  display:flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   min-width: 139px;
@@ -63,16 +68,19 @@
     text-align: end;
     font-size: 16px;
     line-height: 20px;
+    margin-top: -3px;
   }
-   @media (min-width: @desktop-width) {
-    text-align: start;
-   }
+
+  @media (min-width: @desktop-width) {
+    line-height: 22px;
+    text-align: left;
+  }
 }
 
 .contacts__address {
   @media (min-width: @tablet-width) {
-  display: inline-block;
-  margin-bottom: 19px;
+    display: inline-block;
+    margin-bottom: 19px;
   }
 }
 
@@ -81,18 +89,35 @@
   position: relative;
   min-height: 362px;
   width: 100%;
-  background-image: url(../../img/contacts-images/map-image.png);
+  background-image: url("../../img/contacts-images/map-image.png");
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/contacts-images/map-image@2x.png");
+    background-size: cover;
+  }
+
   @media (min-width: @tablet-width) {
+    background-image: url("../../img/contacts-images/map-image-tablet.png");
     min-height: 400px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/contacts-images/map-image-tablet@2x.png");
+      background-size: cover;
+    }
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     min-height: 400px;
+    background-image: url("../../img/contacts-images/map-image-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/contacts-images/map-image-desktop@2x.png");
+      background-size: cover;
+    }
   }
 }
 
